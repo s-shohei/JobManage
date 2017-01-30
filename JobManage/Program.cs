@@ -16,7 +16,7 @@ namespace JobManage
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new JM0001Form());
         }
     }
 }
