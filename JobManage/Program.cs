@@ -11,6 +11,7 @@ namespace JobManage
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>
+        /// test
         [STAThread]
         static void Main()
         {
