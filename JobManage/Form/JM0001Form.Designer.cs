@@ -38,7 +38,7 @@
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Location = new System.Drawing.Point(53, 87);
+            this.UserNameLabel.Location = new System.Drawing.Point(53, 68);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(60, 19);
             this.UserNameLabel.TabIndex = 0;
@@ -47,7 +47,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(53, 158);
+            this.PasswordLabel.Location = new System.Drawing.Point(53, 139);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(66, 19);
             this.PasswordLabel.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.UserNameTextbox.CustomButton.UseSelectable = true;
             this.UserNameTextbox.CustomButton.Visible = false;
             this.UserNameTextbox.Lines = new string[0];
-            this.UserNameTextbox.Location = new System.Drawing.Point(53, 109);
+            this.UserNameTextbox.Location = new System.Drawing.Point(53, 90);
             this.UserNameTextbox.MaxLength = 32767;
             this.UserNameTextbox.Name = "UserNameTextbox";
             this.UserNameTextbox.PasswordChar = '\0';
@@ -99,7 +99,7 @@
             this.PasswordTextbox.CustomButton.UseSelectable = true;
             this.PasswordTextbox.CustomButton.Visible = false;
             this.PasswordTextbox.Lines = new string[0];
-            this.PasswordTextbox.Location = new System.Drawing.Point(53, 180);
+            this.PasswordTextbox.Location = new System.Drawing.Point(53, 161);
             this.PasswordTextbox.MaxLength = 32767;
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.PasswordChar = '*';
@@ -117,7 +117,7 @@
             // 
             // LoginBtn
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(148, 225);
+            this.LoginBtn.Location = new System.Drawing.Point(148, 206);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(75, 23);
             this.LoginBtn.TabIndex = 4;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UserNameLabel);
             this.Name = "JM0001Form";
-            this.Text = "かどうくん";
+            this.Text = "JobManager";
             this.Load += new System.EventHandler(this.JM0001Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

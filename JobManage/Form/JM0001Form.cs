@@ -30,7 +30,6 @@ namespace JobManage
                 {
                     string test = user.USER_ID.ToString() + "  ";
                     test = test + user.USER_NAME + "\r\n";
-                    MessageBox.Show(test, "test", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
