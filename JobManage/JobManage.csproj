@@ -108,6 +108,7 @@
     <Compile Include="Form\JM0001Form.Designer.cs">
       <DependentUpon>JM0001Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\IButton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
