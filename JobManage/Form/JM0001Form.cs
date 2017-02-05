@@ -46,28 +46,11 @@ namespace JobManage
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            //TODO Call OnClickLoginBtnLogic たぶんログイン判定処理
-            
-            //if resultCode = 0{
-            //JM0001クローズ
-            //JM0002Formへ遷移する
-            //}
-            //ユーザ名パスワード名の不正
-            //else if resultCode = 1{
-                //メッセージ出力
-                //MessageBox.Show("ユーザ名orパスワードが不正です。",
-                //"エラー",
-                //MessageBoxButtons.OK,
-                //MessageBoxIcon.Error);
-                //}
-            //システムエラーおよびその他エラー
-            //else {
-                //メッセージ出力
-                MessageBox.Show("システムエラーです。管理者に問い合わせてください。",
-                "エラー",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-//            }
+            //TODO Call OnclickLoginButtonJM0001From
+            //メッセージ出力
+//            MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
         }
     }
 }
