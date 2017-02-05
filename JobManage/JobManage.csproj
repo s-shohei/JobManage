@@ -99,7 +99,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseModel\M_PROJECT.cs">
+      <DependentUpon>JobManageDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\M_REGION.cs">
+      <DependentUpon>JobManageDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\M_TASK.cs">
+      <DependentUpon>JobManageDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseModel\M_USER.cs">
+      <DependentUpon>JobManageDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\T_TASK_DETAIL.cs">
       <DependentUpon>JobManageDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Form\JM0001Form.cs">

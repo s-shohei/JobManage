@@ -4,7 +4,46 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="JobManageModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\work\03_C#\PJ\JobManage\JobManage\bin\Debug\JobManage.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="JobManageModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\work\03_C#\PJ\JobManage\JobManage\bin\Debug\JobManage.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="M_PROJECT">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="PROJECT_ID" />
+            <PropertyRef Name="PROJECT_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="PROJECT_ID" Type="integer" Nullable="false" />
+          <Property Name="PROJECT_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="USER_ID" Type="integer" Nullable="false" />
+          <Property Name="DEL_FLG" Type="integer" />
+        </EntityType>
+        <EntityType Name="M_REGION">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="REGION_ID" />
+            <PropertyRef Name="REGION_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="REGION_ID" Type="integer" Nullable="false" />
+          <Property Name="REGION_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="USER_ID" Type="integer" Nullable="false" />
+          <Property Name="DEL_FLG" Type="integer" />
+        </EntityType>
+        <EntityType Name="M_TASK">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="TASK_ID" />
+            <PropertyRef Name="TASK_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="TASK_ID" Type="integer" Nullable="false" />
+          <Property Name="TASK_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="USER_ID" Type="integer" Nullable="false" />
+          <Property Name="DEL_FLG" Type="integer" />
+        </EntityType>
         <EntityType Name="M_USER">
           <Key>
             <PropertyRef Name="USER_ID" />
@@ -14,11 +53,31 @@
           <Property Name="USER_PASSWORD" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="DEL_FLG" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
+        <EntityType Name="T_TASK_DETAIL">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="REGION_ID" />
+            <PropertyRef Name="PROKECT_ID" />
+            <PropertyRef Name="TASK_ID" />
+          </Key>
+          <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="REGION_ID" Type="integer" Nullable="false" />
+          <Property Name="PROKECT_ID" Type="integer" Nullable="false" />
+          <Property Name="TASK_ID" Type="integer" Nullable="false" />
+          <Property Name="START_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="END_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="TASK_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="REMARKS" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DEL_FLG" Type="integer" />
+        </EntityType>
         <EntityContainer Name="JobManageModelStoreContainer">
+          <EntitySet Name="M_PROJECT" EntityType="Self.M_PROJECT" store:Type="Tables" />
+          <EntitySet Name="M_REGION" EntityType="Self.M_REGION" store:Type="Tables" />
+          <EntitySet Name="M_TASK" EntityType="Self.M_TASK" store:Type="Tables" />
           <EntitySet Name="M_USER" EntityType="Self.M_USER" store:Type="Tables" />
+          <EntitySet Name="T_TASK_DETAIL" EntityType="Self.T_TASK_DETAIL" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="JobManageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -33,7 +92,67 @@
         </EntityType>
         <EntityContainer Name="JobManageEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="M_USER" EntityType="Self.M_USER" />
+          <EntitySet Name="M_PROJECT" EntityType="JobManageModel.M_PROJECT" />
+          <EntitySet Name="M_REGION" EntityType="JobManageModel.M_REGION" />
+          <EntitySet Name="M_TASK" EntityType="JobManageModel.M_TASK" />
+          <EntitySet Name="T_TASK_DETAIL" EntityType="JobManageModel.T_TASK_DETAIL" />
         </EntityContainer>
+        <EntityType Name="M_PROJECT">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="PROJECT_ID" />
+            <PropertyRef Name="PROJECT_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="PROJECT_ID" Type="Int64" Nullable="false" />
+          <Property Name="PROJECT_NAME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="USER_ID" Type="Int64" Nullable="false" />
+          <Property Name="DEL_FLG" Type="Int64" />
+        </EntityType>
+        <EntityType Name="M_REGION">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="REGION_ID" />
+            <PropertyRef Name="REGION_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="REGION_ID" Type="Int64" Nullable="false" />
+          <Property Name="REGION_NAME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="USER_ID" Type="Int64" Nullable="false" />
+          <Property Name="DEL_FLG" Type="Int64" />
+        </EntityType>
+        <EntityType Name="M_TASK">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="TASK_ID" />
+            <PropertyRef Name="TASK_NAME" />
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="TASK_ID" Type="Int64" Nullable="false" />
+          <Property Name="TASK_NAME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="USER_ID" Type="Int64" Nullable="false" />
+          <Property Name="DEL_FLG" Type="Int64" />
+        </EntityType>
+        <EntityType Name="T_TASK_DETAIL">
+          <Key>
+            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="REGION_ID" />
+            <PropertyRef Name="PROKECT_ID" />
+            <PropertyRef Name="TASK_ID" />
+          </Key>
+          <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="REGION_ID" Type="Int64" Nullable="false" />
+          <Property Name="PROKECT_ID" Type="Int64" Nullable="false" />
+          <Property Name="TASK_ID" Type="Int64" Nullable="false" />
+          <Property Name="START_TIME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="END_TIME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TASK_TIME" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="REMARKS" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DEL_FLG" Type="Int64" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -47,6 +166,54 @@
                 <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
                 <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
                 <ScalarProperty Name="DEL_FLG" ColumnName="DEL_FLG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_PROJECT">
+            <EntityTypeMapping TypeName="JobManageModel.M_PROJECT">
+              <MappingFragment StoreEntitySet="M_PROJECT">
+                <ScalarProperty Name="DEL_FLG" ColumnName="DEL_FLG" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+                <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_REGION">
+            <EntityTypeMapping TypeName="JobManageModel.M_REGION">
+              <MappingFragment StoreEntitySet="M_REGION">
+                <ScalarProperty Name="DEL_FLG" ColumnName="DEL_FLG" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="REGION_NAME" ColumnName="REGION_NAME" />
+                <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_TASK">
+            <EntityTypeMapping TypeName="JobManageModel.M_TASK">
+              <MappingFragment StoreEntitySet="M_TASK">
+                <ScalarProperty Name="DEL_FLG" ColumnName="DEL_FLG" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="TASK_NAME" ColumnName="TASK_NAME" />
+                <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_TASK_DETAIL">
+            <EntityTypeMapping TypeName="JobManageModel.T_TASK_DETAIL">
+              <MappingFragment StoreEntitySet="T_TASK_DETAIL">
+                <ScalarProperty Name="DEL_FLG" ColumnName="DEL_FLG" />
+                <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+                <ScalarProperty Name="TASK_TIME" ColumnName="TASK_TIME" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+                <ScalarProperty Name="PROKECT_ID" ColumnName="PROKECT_ID" />
+                <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
