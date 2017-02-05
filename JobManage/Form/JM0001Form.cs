@@ -48,7 +48,7 @@ namespace JobManage
         {
             //TODO Call OnclickLoginButtonJM0001From
             //メッセージ出力
-//            MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
         }
