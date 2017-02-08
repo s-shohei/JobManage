@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JobManage.DatabaseModel;
 using MetroFramework.Forms;
+using JobManage.Logic;
 
 namespace JobManage
 {
@@ -49,7 +50,23 @@ namespace JobManage
             //TODO Call OnclickLoginButtonJM0001From
             //メッセージ出力
             //MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            IButton logicButton = new OnClickLoginButtonJM0001Form();
+            logicButton.OnClickLogic();
+            //if resultCode = 0{
+            //JM0001クローズ
+            //JM0002Formへ遷移する
+            //}
+            //ユーザ名パスワード名の不正
+            //else if resultCode = 1{
+            //メッセージ出力
+            //MessageBox.Show("ユーザ名orパスワードが不正です。",
+            //"エラー",
+            //MessageBoxButtons.OK,
+            //MessageBoxIcon.Error);
+            //}
+            //システムエラーおよびその他エラー
+            //else {
+            //}
 
         }
     }

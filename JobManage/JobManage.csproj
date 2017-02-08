@@ -84,6 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const\ErrorMessageConst.cs" />
+    <Compile Include="Dao\MUserDao.cs" />
     <Compile Include="DatabaseModel\JobManageDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,11 +124,16 @@
     </Compile>
     <Compile Include="Logic\IButton.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
       <DependentUpon>JM0001Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\JobManage.JM0001Form.resources" />
+    <EmbeddedResource Include="obj\Debug\JobManage.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,9 +148,20 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>JobManageDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bin\Debug\JobManage.db" />
+    <None Include="bin\Debug\JobManage.exe.config" />
+    <None Include="bin\Debug\JobManage.vshost.exe.config" />
+    <None Include="bin\Debug\JobManage.vshost.exe.manifest" />
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.ssdl" />
+    <None Include="obj\Debug\JobManage.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\JobManage.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,6 +180,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\JobManage.exe" />
+    <Content Include="bin\Debug\JobManage.pdb" />
+    <Content Include="bin\Debug\JobManage.vshost.exe" />
+    <Content Include="bin\Debug\MetroFramework.Design.dll" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.EF6.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.xml" />
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="DatabaseModel\JobManageDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
@@ -172,6 +206,12 @@
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
       <LastGenOutput>JobManageDBModel.cs</LastGenOutput>
     </Content>
+    <Content Include="obj\Debug\JobManage.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\JobManage.exe" />
+    <Content Include="obj\Debug\JobManage.pdb" />
+    <Content Include="obj\Debug\TempPE\DatabaseModel.JobManageDBModel.cs.dll" />
+    <Content Include="obj\Debug\TempPE\DatabaseModel.JobManageDBModel.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
