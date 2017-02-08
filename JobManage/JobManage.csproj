@@ -148,10 +148,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>JobManageDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="bin\Debug\JobManage.db" />
-    <None Include="bin\Debug\JobManage.exe.config" />
-    <None Include="bin\Debug\JobManage.vshost.exe.config" />
-    <None Include="bin\Debug\JobManage.vshost.exe.manifest" />
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
