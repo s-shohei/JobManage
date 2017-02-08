@@ -141,6 +141,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>JobManageDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DatabaseModel\JobManage.db" />
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
