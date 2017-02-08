@@ -176,22 +176,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\EntityFramework.dll" />
-    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
-    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
-    <Content Include="bin\Debug\EntityFramework.xml" />
-    <Content Include="bin\Debug\JobManage.exe" />
-    <Content Include="bin\Debug\JobManage.pdb" />
-    <Content Include="bin\Debug\JobManage.vshost.exe" />
-    <Content Include="bin\Debug\MetroFramework.Design.dll" />
-    <Content Include="bin\Debug\MetroFramework.dll" />
-    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
-    <Content Include="bin\Debug\System.Data.SQLite.dll" />
-    <Content Include="bin\Debug\System.Data.SQLite.EF6.dll" />
-    <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
-    <Content Include="bin\Debug\System.Data.SQLite.xml" />
-    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
-    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="DatabaseModel\JobManageDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
