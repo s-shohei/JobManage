@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const\JMConst.cs" />
     <Compile Include="Const\ErrorMessageConst.cs" />
     <Compile Include="Dao\MUserDao.cs" />
     <Compile Include="DatabaseModel\JobManageDBModel.Context.cs">
@@ -122,7 +123,8 @@
     <Compile Include="Form\JM0001Form.Designer.cs">
       <DependentUpon>JM0001Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\IButton.cs" />
+    <Compile Include="Logic\AbstractButton.cs" />
+    <Compile Include="Logic\ButtonFactory.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,6 +148,7 @@
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
+    <None Include="JobManage.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using JobManage.DatabaseModel;
 using MetroFramework.Forms;
 using JobManage.Logic;
+using JobManage.Const;
 
 namespace JobManage
 {
@@ -47,11 +48,43 @@ namespace JobManage
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            // Factoryよりインスタンスを生成
+            ButtonFactory factory = new ButtonFactory();
+            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.LoginButton);
+
+            try
+            {
+                // ログインボタン押下処理
+                switch(button.OnClickLogic(this))
+                {
+                    case 0:
+                        // JM0002Formを表示
+                        MessageBox.Show("成功！！");
+                        break;
+                    case 1:
+                        // ログイン失敗
+                        MessageBox.Show(ErrorMessageConst.ERR_MSG_LOGIN_FAILED);
+                        break;
+                }
+                // ボタン押下時の処理
+                ;
+            }
+            catch(Exception ex)
+            {
+                // システムエラー
+                MessageBox.Show(ErrorMessageConst.ERR_MSG_SYSTEM_ERROR);
+            }
+
+
+
+
+
+
             //TODO Call OnclickLoginButtonJM0001From
             //メッセージ出力
             //MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            IButton logicButton = new OnClickLoginButtonJM0001Form();
-            logicButton.OnClickLogic();
+            //AbstractButton logicButton = new OnClickLoginButtonJM0001Form();
+            //logicButton.OnClickLogic();
             //if resultCode = 0{
             //JM0001クローズ
             //JM0002Formへ遷移する

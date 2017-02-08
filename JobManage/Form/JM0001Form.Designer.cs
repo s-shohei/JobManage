@@ -59,7 +59,7 @@
             // 
             // 
             this.UserNameTextbox.CustomButton.Image = null;
-            this.UserNameTextbox.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.UserNameTextbox.CustomButton.Location = new System.Drawing.Point(148, 1);
             this.UserNameTextbox.CustomButton.Name = "";
             this.UserNameTextbox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.UserNameTextbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -90,7 +90,7 @@
             // 
             // 
             this.PasswordTextbox.CustomButton.Image = null;
-            this.PasswordTextbox.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.PasswordTextbox.CustomButton.Location = new System.Drawing.Point(148, 1);
             this.PasswordTextbox.CustomButton.Name = "";
             this.PasswordTextbox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.PasswordTextbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -145,10 +145,10 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel UserNameLabel;
-        private MetroFramework.Controls.MetroLabel PasswordLabel;
-        private MetroFramework.Controls.MetroTextBox UserNameTextbox;
-        private MetroFramework.Controls.MetroTextBox PasswordTextbox;
-        private MetroFramework.Controls.MetroButton LoginBtn;
+        internal MetroFramework.Controls.MetroLabel UserNameLabel;
+        internal MetroFramework.Controls.MetroLabel PasswordLabel;
+        internal MetroFramework.Controls.MetroTextBox UserNameTextbox;
+        internal MetroFramework.Controls.MetroTextBox PasswordTextbox;
+        internal MetroFramework.Controls.MetroButton LoginBtn;
     }
 }

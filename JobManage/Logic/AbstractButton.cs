@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JobManage;
+using MetroFramework.Forms;
 
 namespace JobManage.Logic
 {
-    public abstract class IButton
+    public abstract class AbstractButton
     {
         /// <summary>
         /// ボタン押下時のメイン処理
         /// </summary>
-        public abstract void OnClickLogic();
+        public abstract int OnClickLogic(MetroForm form);
 
         /// <summary>
         /// 各ボタンの状態を制御
