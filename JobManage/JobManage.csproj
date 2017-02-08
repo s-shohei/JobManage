@@ -124,16 +124,11 @@
     </Compile>
     <Compile Include="Logic\IButton.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
       <DependentUpon>JM0001Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\JobManage.JM0001Form.resources" />
-    <EmbeddedResource Include="obj\Debug\JobManage.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -151,13 +146,6 @@
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.csdl" />
-    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.msl" />
-    <None Include="obj\Debug\edmxResourcesToEmbed\DatabaseModel\JobManageDBModel.ssdl" />
-    <None Include="obj\Debug\JobManage.csproj.GenerateResource.Cache" />
-    <None Include="obj\Debug\JobManage.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,12 +174,6 @@
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
       <LastGenOutput>JobManageDBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="obj\Debug\JobManage.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\JobManage.exe" />
-    <Content Include="obj\Debug\JobManage.pdb" />
-    <Content Include="obj\Debug\TempPE\DatabaseModel.JobManageDBModel.cs.dll" />
-    <Content Include="obj\Debug\TempPE\DatabaseModel.JobManageDBModel.Designer.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
