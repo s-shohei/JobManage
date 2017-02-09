@@ -11,8 +11,6 @@ using JobManage.DatabaseModel;
 using MetroFramework.Forms;
 using JobManage.Logic;
 using JobManage.Const;
-using JobManage.Form;
-
 
 namespace JobManage
 {
@@ -60,11 +58,8 @@ namespace JobManage
                 switch(button.OnClickLogic(this))
                 {
                     case 0:
-                        // JM0001Formを非表示,JM0002Formを表示
+                        // JM0002Formを表示
                         MessageBox.Show("成功！！");
-                        //this.Visible = false;
-                        JM0002Form MainMenu = new JM0002Form();
-                        MainMenu.Show();
                         break;
                     case 1:
                         // ログイン失敗
