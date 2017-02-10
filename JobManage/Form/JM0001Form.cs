@@ -11,6 +11,7 @@ using JobManage.DatabaseModel;
 using MetroFramework.Forms;
 using JobManage.Logic;
 using JobManage.Const;
+using JobManage.Form;
 
 namespace JobManage
 {
@@ -58,9 +59,11 @@ namespace JobManage
                 switch(button.OnClickLogic(this))
                 {
                     case 0:
-                        // JM0002Formを表示
-                        MessageBox.Show("成功！！");
+                        // JM0001Formを非表示,JM0002Formを表示
+                        JM0002Form JM0002Form = new JM0002Form(this);
+                        JM0002Form.Show();
                         break;
+
                     case 1:
                         // ログイン失敗
                         MessageBox.Show(ErrorMessageConst.ERR_MSG_LOGIN_FAILED);
@@ -74,33 +77,6 @@ namespace JobManage
                 // システムエラー
                 MessageBox.Show(ErrorMessageConst.ERR_MSG_SYSTEM_ERROR);
             }
-
-
-
-
-
-
-            //TODO Call OnclickLoginButtonJM0001From
-            //メッセージ出力
-            //MessageBox.Show(xxxxx, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //AbstractButton logicButton = new OnClickLoginButtonJM0001Form();
-            //logicButton.OnClickLogic();
-            //if resultCode = 0{
-            //JM0001クローズ
-            //JM0002Formへ遷移する
-            //}
-            //ユーザ名パスワード名の不正
-            //else if resultCode = 1{
-            //メッセージ出力
-            //MessageBox.Show("ユーザ名orパスワードが不正です。",
-            //"エラー",
-            //MessageBoxButtons.OK,
-            //MessageBoxIcon.Error);
-            //}
-            //システムエラーおよびその他エラー
-            //else {
-            //}
-
         }
     }
 }

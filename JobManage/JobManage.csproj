@@ -123,13 +123,23 @@
     <Compile Include="Form\JM0001Form.Designer.cs">
       <DependentUpon>JM0001Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\JM0002Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JM0002Form.Designer.cs">
+      <DependentUpon>JM0002Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\AbstractButton.cs" />
     <Compile Include="Logic\ButtonFactory.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
+    <Compile Include="Logic\OnLoadLogicJM0002.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
       <DependentUpon>JM0001Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JM0002Form.resx">
+      <DependentUpon>JM0002Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -148,7 +158,9 @@
     <None Include="DatabaseModel\JobManageDBModel.edmx.diagram">
       <DependentUpon>JobManageDBModel.edmx</DependentUpon>
     </None>
-    <None Include="JobManage.db" />
+    <None Include="JobManage.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
