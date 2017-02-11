@@ -20,5 +20,17 @@ namespace JobManage.Dao
 
             return recordList;
         }
+
+        public static long SelectUserId(string userName)
+        {
+            M_USER result = null;
+
+            using (var db = new JobManageEntities())
+            {
+                result = db.M_USER.Where(x => x.USER_NAME == userName).First();
+            }
+
+            return result.USER_ID;
+        }
     }
 }

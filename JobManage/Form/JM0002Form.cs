@@ -15,7 +15,7 @@ namespace JobManage.Form
     public partial class JM0002Form : MetroForm
     {
 
-        private JM0001Form _jm0001form;
+        public JM0001Form _jm0001form;
 
         public JM0002Form(JM0001Form jm0001form)
         {
@@ -28,7 +28,7 @@ namespace JobManage.Form
             //[トップ画面読み込み処理](OnLoadLogicJM0002)を呼び出す
             FormLoadFactory factory = new FormLoadFactory();
             AbstractFormLoad formload = factory.CreateFormLoad(Const.JMConst.FormId.JM0002Form);
-            formload.OnLoad();
+            formload.OnLoad(this);
         }
         private void JM0002Form_Closing(object sender, FormClosingEventArgs e)
         {

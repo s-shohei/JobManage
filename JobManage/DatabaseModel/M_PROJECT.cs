@@ -15,6 +15,7 @@ namespace JobManage.DatabaseModel
     public partial class M_PROJECT
     {
         public long SEQ { get; set; }
+        public long REGION_ID { get; set; }
         public long PROJECT_ID { get; set; }
         public string PROJECT_NAME { get; set; }
         public long USER_ID { get; set; }
