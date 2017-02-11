@@ -24,27 +24,6 @@ namespace JobManage
 
         private void JM0001Form_Load(object sender, EventArgs e)
         {
-            using (var db = new JobManageEntities())
-            {
-
-                var userList = db.M_USER;
-
-                foreach(var user in userList)
-                {
-                    string test = user.USER_ID.ToString() + "  ";
-                    test = test + user.USER_NAME + "\r\n";
-                }
-            }
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -62,6 +41,7 @@ namespace JobManage
                         // JM0001Formを非表示,JM0002Formを表示
                         JM0002Form JM0002Form = new JM0002Form(this);
                         JM0002Form.Show();
+                        this.Hide();
                         break;
 
                     case 1:
@@ -69,8 +49,6 @@ namespace JobManage
                         MessageBox.Show(ErrorMessageConst.ERR_MSG_LOGIN_FAILED);
                         break;
                 }
-                // ボタン押下時の処理
-                ;
             }
             catch(Exception ex)
             {

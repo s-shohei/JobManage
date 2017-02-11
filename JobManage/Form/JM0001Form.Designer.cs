@@ -82,7 +82,6 @@
             this.UserNameTextbox.UseSelectable = true;
             this.UserNameTextbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.UserNameTextbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.UserNameTextbox.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // PasswordTextbox
             // 
@@ -113,7 +112,6 @@
             this.PasswordTextbox.UseSelectable = true;
             this.PasswordTextbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PasswordTextbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.PasswordTextbox.Click += new System.EventHandler(this.metroTextBox2_Click);
             // 
             // LoginBtn
             // 

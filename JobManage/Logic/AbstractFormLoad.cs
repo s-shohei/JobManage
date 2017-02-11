@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace JobManage.Logic
 {
-    class OnLoadLogicJM0002
+    public abstract class AbstractFormLoad
     {
+        public abstract void OnLoad();
     }
 }

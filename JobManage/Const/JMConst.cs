@@ -12,5 +12,11 @@ namespace JobManage.Const
         {
             LoginButton = 1
         }
+
+        public enum FormId
+        {
+            JM0001Form = 1,
+            JM0002Form = 2
+        }
     }
 }

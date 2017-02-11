@@ -130,9 +130,11 @@
       <DependentUpon>JM0002Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\AbstractButton.cs" />
+    <Compile Include="Logic\AbstractFormLoad.cs" />
     <Compile Include="Logic\ButtonFactory.cs" />
+    <Compile Include="Logic\FormLoadFactory.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
-    <Compile Include="Logic\OnLoadLogicJM0002.cs" />
+    <Compile Include="Logic\OnFormLoadJM0002.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
