@@ -17,7 +17,6 @@ namespace JobManage.DatabaseModel
         public long SEQ { get; set; }
         public long REGION_ID { get; set; }
         public string REGION_NAME { get; set; }
-        public long USER_ID { get; set; }
-        public Nullable<long> DEL_FLG { get; set; }
+        public long DEL_FLG { get; set; }
     }
 }

@@ -9,28 +9,19 @@ namespace JobManage.Dao
 {
     public class MUserDao
     {
-        public static List<M_USER> SelectRecord(string user_name,string user_password)
+        public static long _userId = 0;
+
+        public static List<M_USER> SelectRecord(string userName, string passWord)
         {
-            List<M_USER> recordList = null;
+            List<M_USER> result = null;
 
             using (var db = new JobManageEntities())
             {
-                recordList = db.M_USER.Where(x => x.USER_NAME == user_name && x.USER_PASSWORD == user_password).ToList();
+                result = db.M_USER.Where(x => x.USER_NAME == userName && x.USER_PASSWORD == passWord).ToList<M_USER>();
+                _userId = result.First().USER_ID;
             }
 
-            return recordList;
-        }
-
-        public static long SelectUserId(string userName)
-        {
-            M_USER result = null;
-
-            using (var db = new JobManageEntities())
-            {
-                result = db.M_USER.Where(x => x.USER_NAME == userName).First();
-            }
-
-            return result.USER_ID;
+            return result;
         }
     }
 }

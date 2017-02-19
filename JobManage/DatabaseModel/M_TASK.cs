@@ -17,7 +17,6 @@ namespace JobManage.DatabaseModel
         public long SEQ { get; set; }
         public long TASK_ID { get; set; }
         public string TASK_NAME { get; set; }
-        public long USER_ID { get; set; }
-        public Nullable<long> DEL_FLG { get; set; }
+        public long DEL_FLG { get; set; }
     }
 }

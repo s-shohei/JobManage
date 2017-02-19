@@ -86,39 +86,42 @@
   <ItemGroup>
     <Compile Include="Const\JMConst.cs" />
     <Compile Include="Const\ErrorMessageConst.cs" />
-    <Compile Include="Dao\MProjectDao.cs" />
-    <Compile Include="Dao\MRegionDao.cs" />
     <Compile Include="Dao\MUserDao.cs" />
-    <Compile Include="DatabaseModel\JobManagedb.Context.cs">
+    <Compile Include="DatabaseModel\JobManage.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JobManagedb.Context.tt</DependentUpon>
+      <DependentUpon>JobManage.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseModel\JobManagedb.cs" />
-    <Compile Include="DatabaseModel\JobManagedb.Designer.cs">
+    <Compile Include="DatabaseModel\JobManage.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JobManagedb.edmx</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseModel\JobManagedb1.cs">
+    <Compile Include="DatabaseModel\JobManage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\M_ANKEN.cs">
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\M_PROJECT.cs">
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\M_REGION.cs">
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseModel\M_SYOZOKU.cs">
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\M_TASK.cs">
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\M_USER.cs">
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel\T_TASK_DETAIL.cs">
-      <DependentUpon>JobManagedb.tt</DependentUpon>
+      <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
     <Compile Include="Form\JM0001Form.cs">
       <SubType>Form</SubType>
@@ -138,6 +141,7 @@
     <Compile Include="Logic\FormLoadFactory.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
     <Compile Include="Logic\OnFormLoadJM0002.cs" />
+    <Compile Include="Model\JM0002ComboBoxListModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\JM0001Form.resx">
@@ -156,12 +160,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DatabaseModel\JobManagedb.edmx">
+    <EntityDeploy Include="DatabaseModel\JobManage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>JobManagedb.Designer.cs</LastGenOutput>
+      <LastGenOutput>JobManage.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DatabaseModel\JobManagedb.edmx.diagram">
-      <DependentUpon>JobManagedb.edmx</DependentUpon>
+    <None Include="DatabaseModel\JobManage.edmx.diagram">
+      <DependentUpon>JobManage.edmx</DependentUpon>
     </None>
     <None Include="JobManage.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -187,15 +191,15 @@
     <Folder Include="Util\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseModel\JobManagedb.Context.tt">
+    <Content Include="DatabaseModel\JobManage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JobManagedb.edmx</DependentUpon>
-      <LastGenOutput>JobManagedb.Context.cs</LastGenOutput>
+      <DependentUpon>JobManage.edmx</DependentUpon>
+      <LastGenOutput>JobManage.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DatabaseModel\JobManagedb.tt">
+    <Content Include="DatabaseModel\JobManage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JobManagedb.edmx</DependentUpon>
-      <LastGenOutput>JobManagedb1.cs</LastGenOutput>
+      <DependentUpon>JobManage.edmx</DependentUpon>
+      <LastGenOutput>JobManage.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

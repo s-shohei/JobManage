@@ -25,8 +25,10 @@ namespace JobManage.DatabaseModel
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<M_ANKEN> M_ANKEN { get; set; }
         public virtual DbSet<M_PROJECT> M_PROJECT { get; set; }
         public virtual DbSet<M_REGION> M_REGION { get; set; }
+        public virtual DbSet<M_SYOZOKU> M_SYOZOKU { get; set; }
         public virtual DbSet<M_TASK> M_TASK { get; set; }
         public virtual DbSet<M_USER> M_USER { get; set; }
         public virtual DbSet<T_TASK_DETAIL> T_TASK_DETAIL { get; set; }

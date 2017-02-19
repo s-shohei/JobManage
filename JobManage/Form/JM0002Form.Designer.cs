@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.RegionLabel = new MetroFramework.Controls.MetroLabel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProjectLabel = new MetroFramework.Controls.MetroLabel();
-            this.TaskLabel = new MetroFramework.Controls.MetroLabel();
-            this.RegionCombBox = new MetroFramework.Controls.MetroComboBox();
+            this.RegionLabel = new MetroFramework.Controls.MetroLabel();
+            this.AnkenLabel = new MetroFramework.Controls.MetroLabel();
             this.ProjectCombBox = new MetroFramework.Controls.MetroComboBox();
-            this.TaskCombBox = new MetroFramework.Controls.MetroComboBox();
+            this.RegionCombBox = new MetroFramework.Controls.MetroComboBox();
+            this.AnkenCombBox = new MetroFramework.Controls.MetroComboBox();
             this.StartBtn = new MetroFramework.Controls.MetroButton();
             this.EndBtn = new MetroFramework.Controls.MetroButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -55,68 +55,68 @@
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // RegionLabel
-            // 
-            this.RegionLabel.AutoSize = true;
-            this.RegionLabel.Location = new System.Drawing.Point(36, 58);
-            this.RegionLabel.Name = "RegionLabel";
-            this.RegionLabel.Size = new System.Drawing.Size(39, 19);
-            this.RegionLabel.TabIndex = 0;
-            this.RegionLabel.Text = "領域";
-            this.RegionLabel.Click += new System.EventHandler(this.metroLabel1_Click);
-            // 
             // ProjectLabel
             // 
             this.ProjectLabel.AutoSize = true;
-            this.ProjectLabel.Location = new System.Drawing.Point(182, 58);
+            this.ProjectLabel.Location = new System.Drawing.Point(36, 58);
             this.ProjectLabel.Name = "ProjectLabel";
-            this.ProjectLabel.Size = new System.Drawing.Size(39, 19);
-            this.ProjectLabel.TabIndex = 1;
-            this.ProjectLabel.Text = "案件";
+            this.ProjectLabel.Size = new System.Drawing.Size(73, 19);
+            this.ProjectLabel.TabIndex = 0;
+            this.ProjectLabel.Text = "プロジェクト";
+            this.ProjectLabel.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
-            // TaskLabel
+            // RegionLabel
             // 
-            this.TaskLabel.AutoSize = true;
-            this.TaskLabel.Location = new System.Drawing.Point(325, 58);
-            this.TaskLabel.Name = "TaskLabel";
-            this.TaskLabel.Size = new System.Drawing.Size(69, 19);
-            this.TaskLabel.TabIndex = 2;
-            this.TaskLabel.Text = "作業項目";
+            this.RegionLabel.AutoSize = true;
+            this.RegionLabel.Location = new System.Drawing.Point(182, 58);
+            this.RegionLabel.Name = "RegionLabel";
+            this.RegionLabel.Size = new System.Drawing.Size(39, 19);
+            this.RegionLabel.TabIndex = 1;
+            this.RegionLabel.Text = "領域";
             // 
-            // RegionCombBox
+            // AnkenLabel
             // 
-            this.RegionCombBox.BackColor = System.Drawing.SystemColors.Window;
-            this.RegionCombBox.FormattingEnabled = true;
-            this.RegionCombBox.ItemHeight = 23;
-            this.RegionCombBox.Location = new System.Drawing.Point(36, 80);
-            this.RegionCombBox.Name = "RegionCombBox";
-            this.RegionCombBox.Size = new System.Drawing.Size(121, 29);
-            this.RegionCombBox.TabIndex = 3;
-            this.RegionCombBox.UseSelectable = true;
+            this.AnkenLabel.AutoSize = true;
+            this.AnkenLabel.Location = new System.Drawing.Point(325, 58);
+            this.AnkenLabel.Name = "AnkenLabel";
+            this.AnkenLabel.Size = new System.Drawing.Size(39, 19);
+            this.AnkenLabel.TabIndex = 2;
+            this.AnkenLabel.Text = "案件";
             // 
             // ProjectCombBox
             // 
+            this.ProjectCombBox.BackColor = System.Drawing.SystemColors.Window;
             this.ProjectCombBox.FormattingEnabled = true;
             this.ProjectCombBox.ItemHeight = 23;
-            this.ProjectCombBox.Location = new System.Drawing.Point(182, 80);
+            this.ProjectCombBox.Location = new System.Drawing.Point(36, 80);
             this.ProjectCombBox.Name = "ProjectCombBox";
             this.ProjectCombBox.Size = new System.Drawing.Size(121, 29);
-            this.ProjectCombBox.TabIndex = 4;
+            this.ProjectCombBox.TabIndex = 3;
             this.ProjectCombBox.UseSelectable = true;
             // 
-            // TaskCombBox
+            // RegionCombBox
             // 
-            this.TaskCombBox.FormattingEnabled = true;
-            this.TaskCombBox.ItemHeight = 23;
-            this.TaskCombBox.Location = new System.Drawing.Point(325, 80);
-            this.TaskCombBox.Name = "TaskCombBox";
-            this.TaskCombBox.Size = new System.Drawing.Size(121, 29);
-            this.TaskCombBox.TabIndex = 5;
-            this.TaskCombBox.UseSelectable = true;
+            this.RegionCombBox.FormattingEnabled = true;
+            this.RegionCombBox.ItemHeight = 23;
+            this.RegionCombBox.Location = new System.Drawing.Point(182, 80);
+            this.RegionCombBox.Name = "RegionCombBox";
+            this.RegionCombBox.Size = new System.Drawing.Size(121, 29);
+            this.RegionCombBox.TabIndex = 4;
+            this.RegionCombBox.UseSelectable = true;
+            // 
+            // AnkenCombBox
+            // 
+            this.AnkenCombBox.FormattingEnabled = true;
+            this.AnkenCombBox.ItemHeight = 23;
+            this.AnkenCombBox.Location = new System.Drawing.Point(325, 80);
+            this.AnkenCombBox.Name = "AnkenCombBox";
+            this.AnkenCombBox.Size = new System.Drawing.Size(318, 29);
+            this.AnkenCombBox.TabIndex = 5;
+            this.AnkenCombBox.UseSelectable = true;
             // 
             // StartBtn
             // 
-            this.StartBtn.Location = new System.Drawing.Point(541, 80);
+            this.StartBtn.Location = new System.Drawing.Point(649, 80);
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(75, 30);
             this.StartBtn.TabIndex = 6;
@@ -125,7 +125,7 @@
             // 
             // EndBtn
             // 
-            this.EndBtn.Location = new System.Drawing.Point(641, 80);
+            this.EndBtn.Location = new System.Drawing.Point(749, 80);
             this.EndBtn.Name = "EndBtn";
             this.EndBtn.Size = new System.Drawing.Size(75, 30);
             this.EndBtn.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             // RegistBtn
             // 
-            this.RegistBtn.Location = new System.Drawing.Point(641, 383);
+            this.RegistBtn.Location = new System.Drawing.Point(751, 383);
             this.RegistBtn.Name = "RegistBtn";
             this.RegistBtn.Size = new System.Drawing.Size(75, 29);
             this.RegistBtn.TabIndex = 8;
@@ -153,14 +153,14 @@
             this.TaskDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.TaskDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TaskDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -171,28 +171,28 @@
             this.終了時刻,
             this.作業時間,
             this.備考});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.TaskDataGridView.EnableHeadersVisualStyles = false;
             this.TaskDataGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TaskDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TaskDataGridView.Location = new System.Drawing.Point(36, 129);
             this.TaskDataGridView.Name = "TaskDataGridView";
             this.TaskDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.TaskDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.TaskDataGridView.RowTemplate.Height = 21;
             this.TaskDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -251,17 +251,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 435);
+            this.ClientSize = new System.Drawing.Size(844, 435);
             this.Controls.Add(this.TaskDataGridView);
             this.Controls.Add(this.RegistBtn);
             this.Controls.Add(this.EndBtn);
             this.Controls.Add(this.StartBtn);
-            this.Controls.Add(this.TaskCombBox);
-            this.Controls.Add(this.ProjectCombBox);
+            this.Controls.Add(this.AnkenCombBox);
             this.Controls.Add(this.RegionCombBox);
-            this.Controls.Add(this.TaskLabel);
-            this.Controls.Add(this.ProjectLabel);
+            this.Controls.Add(this.ProjectCombBox);
+            this.Controls.Add(this.AnkenLabel);
             this.Controls.Add(this.RegionLabel);
+            this.Controls.Add(this.ProjectLabel);
             this.Name = "JM0002Form";
             this.Text = "MainMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JM0002Form_Closing);
@@ -274,12 +274,12 @@
 
         #endregion
 
-        internal MetroFramework.Controls.MetroLabel RegionLabel;
         internal MetroFramework.Controls.MetroLabel ProjectLabel;
-        internal MetroFramework.Controls.MetroLabel TaskLabel;
-        internal MetroFramework.Controls.MetroComboBox RegionCombBox;
+        internal MetroFramework.Controls.MetroLabel RegionLabel;
+        internal MetroFramework.Controls.MetroLabel AnkenLabel;
         internal MetroFramework.Controls.MetroComboBox ProjectCombBox;
-        internal MetroFramework.Controls.MetroComboBox TaskCombBox;
+        internal MetroFramework.Controls.MetroComboBox RegionCombBox;
+        internal MetroFramework.Controls.MetroComboBox AnkenCombBox;
         internal MetroFramework.Controls.MetroButton StartBtn;
         internal MetroFramework.Controls.MetroButton EndBtn;
         internal System.Windows.Forms.Timer timer;

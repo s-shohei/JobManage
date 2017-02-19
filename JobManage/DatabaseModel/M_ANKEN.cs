@@ -12,11 +12,11 @@ namespace JobManage.DatabaseModel
     using System;
     using System.Collections.Generic;
     
-    public partial class M_PROJECT
+    public partial class M_ANKEN
     {
         public long SEQ { get; set; }
-        public long PROJECT_ID { get; set; }
-        public string PROJECT_NAME { get; set; }
+        public long ANKEN_ID { get; set; }
+        public string ANKEN_NAME { get; set; }
         public long DEL_FLG { get; set; }
     }
 }
