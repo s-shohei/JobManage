@@ -43,11 +43,41 @@ namespace JobManage.Form
 
         }
         /// <summary>
-        /// 登録ボタン押下時
+        /// 開始ボタン押下時
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void StartBtn_Click(object sender, EventArgs e)
+        {
+            // factory生成
+            ButtonFactory factory = new ButtonFactory();
+            // ボタン押下時の処理クラスを生成
+            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.StartButton);
+            // ボタン押下時の処理を実行
+            button.OnClickLogic(this);
+        }
+
+        /// <summary>
+        /// 終了ボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EndBtn_Click(object sender, EventArgs e)
+        {
+            // factory生成
+            ButtonFactory factory = new ButtonFactory();
+            // ボタン押下時の処理クラスを生成
+            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            // ボタン押下時の処理を実行
+            button.OnClickLogic(this);
+        }
+
+        /// <summary>
+        /// 登録ボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RegistBtn_Click(object sender, EventArgs e)
         {
             // factory生成
             ButtonFactory factory = new ButtonFactory();

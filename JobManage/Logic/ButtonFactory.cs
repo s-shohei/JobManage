@@ -18,6 +18,12 @@ namespace JobManage.Logic
                 case JMConst.ButtonId.LoginButton:
                     result = new OnClickLoginButtonJM0001Form();
                     break;
+                case JMConst.ButtonId.StartButton:
+                    result = new OnClickStartButtonJM0002Form();
+                    break;
+                case JMConst.ButtonId.EndButton:
+                    result = new OnClickEndButtonJM0002Form();
+                    break;
                 case JMConst.ButtonId.RegistButton:
                     result = new OnClickRegistButtonJM0002Form();
                     break;

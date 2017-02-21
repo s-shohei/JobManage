@@ -8,7 +8,7 @@ using JobManage.Form;
 
 namespace JobManage.Logic
 {
-    public class OnClickRegistButtonJM0002Form : AbstractButton
+    public class OnClickEndButtonJM0002Form : AbstractButton
     {
 
         private JM0002Form _form;
@@ -19,7 +19,7 @@ namespace JobManage.Logic
         }
 
         /// <summary>
-        /// 登録ボタン押下時のメイン処理
+        /// 終了ボタン押下時のメイン処理
         /// </summary>
         /// <param name="form"></param>
         /// <returns></returns>
