@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="JobManageModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\work\03_C#\PJ\JobManage\JobManage.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="JobManageModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\git\repos\JobManage\JobManage\JobManage.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="M_ANKEN">
           <Key>
             <PropertyRef Name="SEQ" />
@@ -74,14 +74,14 @@
         <EntityType Name="T_TASK_DETAIL">
           <Key>
             <PropertyRef Name="SEQ" />
+            <PropertyRef Name="PROJECT_ID" />
             <PropertyRef Name="REGION_ID" />
-            <PropertyRef Name="PROKECT_ID" />
-            <PropertyRef Name="TASK_ID" />
+            <PropertyRef Name="ANKEN_ID" />
           </Key>
           <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="PROJECT_ID" Type="integer" Nullable="false" />
           <Property Name="REGION_ID" Type="integer" Nullable="false" />
-          <Property Name="PROKECT_ID" Type="integer" Nullable="false" />
-          <Property Name="TASK_ID" Type="integer" Nullable="false" />
+          <Property Name="ANKEN_ID" Type="integer" Nullable="false" />
           <Property Name="START_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="END_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="TASK_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
@@ -171,21 +171,21 @@
         <EntityType Name="T_TASK_DETAIL">
           <Key>
             <PropertyRef Name="SEQ" />
+            <PropertyRef Name="PROJECT_ID" />
             <PropertyRef Name="REGION_ID" />
-            <PropertyRef Name="PROKECT_ID" />
-            <PropertyRef Name="TASK_ID" />
+            <PropertyRef Name="ANKEN_ID" />
           </Key>
           <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="PROJECT_ID" Type="Int64" Nullable="false" />
           <Property Name="REGION_ID" Type="Int64" Nullable="false" />
-          <Property Name="PROKECT_ID" Type="Int64" Nullable="false" />
-          <Property Name="TASK_ID" Type="Int64" Nullable="false" />
+          <Property Name="ANKEN_ID" Type="Int64" Nullable="false" />
           <Property Name="START_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="END_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TASK_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="REMARKS" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="DEL_FLG" Type="Int64" />
         </EntityType>
-        <EntityContainer Name="JobManageEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="JobManageEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="M_ANKEN" EntityType="Self.M_ANKEN" />
           <EntitySet Name="M_PROJECT" EntityType="Self.M_PROJECT" />
           <EntitySet Name="M_REGION" EntityType="Self.M_REGION" />
@@ -199,7 +199,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="JobManageModelStoreContainer" CdmEntityContainer="JobManageEntities2">
+        <EntityContainerMapping StorageEntityContainer="JobManageModelStoreContainer" CdmEntityContainer="JobManageEntities">
           <EntitySetMapping Name="M_ANKEN">
             <EntityTypeMapping TypeName="JobManageModel.M_ANKEN">
               <MappingFragment StoreEntitySet="M_ANKEN">
@@ -265,9 +265,9 @@
             <EntityTypeMapping TypeName="JobManageModel.T_TASK_DETAIL">
               <MappingFragment StoreEntitySet="T_TASK_DETAIL">
                 <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+                <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
                 <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
-                <ScalarProperty Name="PROKECT_ID" ColumnName="PROKECT_ID" />
-                <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+                <ScalarProperty Name="ANKEN_ID" ColumnName="ANKEN_ID" />
                 <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
                 <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
                 <ScalarProperty Name="TASK_TIME" ColumnName="TASK_TIME" />
@@ -290,7 +290,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />

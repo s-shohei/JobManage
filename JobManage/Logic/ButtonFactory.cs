@@ -18,6 +18,9 @@ namespace JobManage.Logic
                 case JMConst.ButtonId.LoginButton:
                     result = new OnClickLoginButtonJM0001Form();
                     break;
+                case JMConst.ButtonId.RegistButton:
+                    result = new OnClickRegistButtonJM0002Form();
+                    break;
                 default:
                     break;
             }

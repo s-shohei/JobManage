@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="35b5d9aa832944058e009b1c4d84a24d" Name="Diagram1">
+      <Diagram DiagramId="d0926f59f967457692d3e66eb6ed95b6" Name="Diagram1">
         <EntityTypeShape EntityType="JobManageModel.M_ANKEN" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JobManageModel.M_PROJECT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="JobManageModel.M_REGION" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />

@@ -15,9 +15,9 @@ namespace JobManage.DatabaseModel
     public partial class T_TASK_DETAIL
     {
         public long SEQ { get; set; }
+        public long PROJECT_ID { get; set; }
         public long REGION_ID { get; set; }
-        public long PROKECT_ID { get; set; }
-        public long TASK_ID { get; set; }
+        public long ANKEN_ID { get; set; }
         public string START_TIME { get; set; }
         public string END_TIME { get; set; }
         public string TASK_TIME { get; set; }

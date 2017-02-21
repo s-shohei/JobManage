@@ -10,7 +10,8 @@ namespace JobManage.Const
     {
         public enum ButtonId
         {
-            LoginButton = 1
+            LoginButton = 1,
+            RegistButton = 2
         }
 
         public enum FormId

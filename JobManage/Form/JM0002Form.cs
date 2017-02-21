@@ -42,10 +42,19 @@ namespace JobManage.Form
 
 
         }
-
-        private void metroLabel1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 登録ボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartBtn_Click(object sender, EventArgs e)
         {
-
+            // factory生成
+            ButtonFactory factory = new ButtonFactory();
+            // ボタン押下時の処理クラスを生成
+            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
+            // ボタン押下時の処理を実行
+            button.OnClickLogic(this);
         }
     }
 }

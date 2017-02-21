@@ -42,6 +42,9 @@ namespace JobManage.Logic
                                                                 RegionName = mRegion.REGION_NAME,
                                                                 AnkenName = mAnken.ANKEN_NAME
                                                             }).ToList<JM0002ComboBoxListModel>();
+                    // 作業項目名を取得
+                    List<string> taskNameList = db.M_TASK.Select(x => x.TASK_NAME).ToList<string>();
+
                     // コンボボックス用のデータを取得
                     List<string> projectNameList = test.Select(x=>x.ProjectName).Distinct().ToList<string>();
                     List<string> RegionNameList = test.Select(x => x.RegionName).Distinct().ToList<string>();
@@ -51,6 +54,7 @@ namespace JobManage.Logic
                     _form.ProjectCombBox.DataSource = projectNameList;
                     _form.RegionCombBox.DataSource = RegionNameList;
                     _form.AnkenCombBox.DataSource = AnkenNameList;
+                    _form.TaskComboBox.DataSource = taskNameList;
 
                 }
                 catch(Exception ex)
