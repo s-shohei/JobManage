@@ -74,14 +74,19 @@
         <EntityType Name="T_TASK_DETAIL">
           <Key>
             <PropertyRef Name="USER_ID" />
-            <PropertyRef Name="PROJECT_ID" />
-            <PropertyRef Name="REGION_ID" />
-            <PropertyRef Name="ANKEN_ID" />
+            <PropertyRef Name="PROJECT_NAME" />
+            <PropertyRef Name="REGION_NAME" />
+            <PropertyRef Name="ANKEN_NAME" />
+            <PropertyRef Name="TASK_NAME" />
+            <PropertyRef Name="START_TIME" />
+            <PropertyRef Name="END_TIME" />
+            <PropertyRef Name="TASK_TIME" />
           </Key>
           <Property Name="USER_ID" Type="integer" Nullable="false" />
-          <Property Name="PROJECT_ID" Type="integer" Nullable="false" />
-          <Property Name="REGION_ID" Type="integer" Nullable="false" />
-          <Property Name="ANKEN_ID" Type="integer" Nullable="false" />
+          <Property Name="PROJECT_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="REGION_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="ANKEN_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="TASK_NAME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="START_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="END_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="TASK_TIME" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
@@ -171,14 +176,19 @@
         <EntityType Name="T_TASK_DETAIL">
           <Key>
             <PropertyRef Name="USER_ID" />
-            <PropertyRef Name="PROJECT_ID" />
-            <PropertyRef Name="REGION_ID" />
-            <PropertyRef Name="ANKEN_ID" />
+            <PropertyRef Name="PROJECT_NAME" />
+            <PropertyRef Name="REGION_NAME" />
+            <PropertyRef Name="ANKEN_NAME" />
+            <PropertyRef Name="TASK_NAME" />
+            <PropertyRef Name="START_TIME" />
+            <PropertyRef Name="END_TIME" />
+            <PropertyRef Name="TASK_TIME" />
           </Key>
           <Property Name="USER_ID" Type="Int64" Nullable="false" />
-          <Property Name="PROJECT_ID" Type="Int64" Nullable="false" />
-          <Property Name="REGION_ID" Type="Int64" Nullable="false" />
-          <Property Name="ANKEN_ID" Type="Int64" Nullable="false" />
+          <Property Name="PROJECT_NAME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="REGION_NAME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ANKEN_NAME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TASK_NAME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="START_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="END_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TASK_TIME" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
@@ -265,9 +275,10 @@
             <EntityTypeMapping TypeName="JobManageModel.T_TASK_DETAIL">
               <MappingFragment StoreEntitySet="T_TASK_DETAIL">
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
-                <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
-                <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
-                <ScalarProperty Name="ANKEN_ID" ColumnName="ANKEN_ID" />
+                <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT_NAME" />
+                <ScalarProperty Name="REGION_NAME" ColumnName="REGION_NAME" />
+                <ScalarProperty Name="ANKEN_NAME" ColumnName="ANKEN_NAME" />
+                <ScalarProperty Name="TASK_NAME" ColumnName="TASK_NAME" />
                 <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
                 <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
                 <ScalarProperty Name="TASK_TIME" ColumnName="TASK_TIME" />
@@ -290,7 +301,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />

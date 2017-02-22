@@ -51,7 +51,6 @@ namespace JobManage.Logic
 
             // GridViewに値をセット
             int row =_form.TaskDataGridView.Rows.Add(
-                "",
                 _form.ProjectCombBox.SelectedItem.ToString(),
                 _form.RegionCombBox.SelectedItem.ToString(),
                 _form.AnkenCombBox.SelectedItem.ToString(),

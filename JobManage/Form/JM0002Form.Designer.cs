@@ -44,7 +44,8 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.RegistBtn = new MetroFramework.Controls.MetroButton();
             this.TaskDataGridView = new MetroFramework.Controls.MetroGrid();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaskLabel = new MetroFramework.Controls.MetroLabel();
+            this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
             this.プロジェクト = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.領域 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.案件 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +54,6 @@
             this.終了時刻 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.作業時間 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.備考 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaskLabel = new MetroFramework.Controls.MetroLabel();
-            this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +167,6 @@
             this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TaskDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.No,
             this.プロジェクト,
             this.領域,
             this.案件,
@@ -185,6 +183,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TaskDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.TaskDataGridView.EnableHeadersVisualStyles = false;
             this.TaskDataGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TaskDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -206,11 +205,24 @@
             this.TaskDataGridView.Size = new System.Drawing.Size(1005, 235);
             this.TaskDataGridView.TabIndex = 9;
             // 
-            // No
+            // TaskLabel
             // 
-            this.No.HeaderText = "No";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
+            this.TaskLabel.AutoSize = true;
+            this.TaskLabel.Location = new System.Drawing.Point(647, 58);
+            this.TaskLabel.Name = "TaskLabel";
+            this.TaskLabel.Size = new System.Drawing.Size(65, 19);
+            this.TaskLabel.TabIndex = 10;
+            this.TaskLabel.Text = "作業項目";
+            // 
+            // TaskComboBox
+            // 
+            this.TaskComboBox.FormattingEnabled = true;
+            this.TaskComboBox.ItemHeight = 23;
+            this.TaskComboBox.Location = new System.Drawing.Point(647, 81);
+            this.TaskComboBox.Name = "TaskComboBox";
+            this.TaskComboBox.Size = new System.Drawing.Size(208, 29);
+            this.TaskComboBox.TabIndex = 11;
+            this.TaskComboBox.UseSelectable = true;
             // 
             // プロジェクト
             // 
@@ -259,25 +271,6 @@
             this.備考.Name = "備考";
             this.備考.ReadOnly = true;
             // 
-            // TaskLabel
-            // 
-            this.TaskLabel.AutoSize = true;
-            this.TaskLabel.Location = new System.Drawing.Point(647, 58);
-            this.TaskLabel.Name = "TaskLabel";
-            this.TaskLabel.Size = new System.Drawing.Size(65, 19);
-            this.TaskLabel.TabIndex = 10;
-            this.TaskLabel.Text = "作業項目";
-            // 
-            // TaskComboBox
-            // 
-            this.TaskComboBox.FormattingEnabled = true;
-            this.TaskComboBox.ItemHeight = 23;
-            this.TaskComboBox.Location = new System.Drawing.Point(647, 81);
-            this.TaskComboBox.Name = "TaskComboBox";
-            this.TaskComboBox.Size = new System.Drawing.Size(208, 29);
-            this.TaskComboBox.TabIndex = 11;
-            this.TaskComboBox.UseSelectable = true;
-            // 
             // JM0002Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -321,7 +314,6 @@
         internal MetroFramework.Controls.MetroGrid TaskDataGridView;
         internal MetroFramework.Controls.MetroLabel TaskLabel;
         internal MetroFramework.Controls.MetroComboBox TaskComboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn プロジェクト;
         private System.Windows.Forms.DataGridViewTextBoxColumn 領域;
         private System.Windows.Forms.DataGridViewTextBoxColumn 案件;

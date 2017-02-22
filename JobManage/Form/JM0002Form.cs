@@ -84,7 +84,10 @@ namespace JobManage.Form
             // ボタン押下時の処理クラスを生成
             AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
             // ボタン押下時の処理を実行
-            button.OnClickLogic(this);
+            if(button.OnClickLogic(this) == 0)
+            {
+                MessageBox.Show("登録完了！");
+            }
         }
     }
 }
