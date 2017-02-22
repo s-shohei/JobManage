@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MetroFramework.Forms;
 using JobManage.Form;
-
+using JobManage.Util;
+using JobManage.Const;
 namespace JobManage.Logic
 {
     public class OnClickEndButtonJM0002Form : AbstractButton
@@ -15,7 +16,9 @@ namespace JobManage.Logic
 
         public override void ButtonStateChange()
         {
-            throw new NotImplementedException();
+            _form.StartBtn.Enabled = true;
+            _form.EndBtn.Enabled = false;
+            _form.RegistBtn.Enabled = true;
         }
 
         /// <summary>
@@ -31,12 +34,28 @@ namespace JobManage.Logic
 
             this.init();
 
+            this.ButtonStateChange();
+
+            // 行選択をクリア
+            _form.TaskDataGridView.ClearSelection();
+
             return result;
         }
 
         private void init()
         {
+            // 終了時間を取得してセット
+            _form.TaskDataGridView.CurrentRow.Cells[6].Value = TimerUtil.RoundUp(DateTime.Now, JMConst.INTERVAL_TIME);
 
+            // 開始・終了時間を取得
+            var startTime = _form.TaskDataGridView.CurrentRow.Cells[5].Value;
+            var endTime = _form.TaskDataGridView.CurrentRow.Cells[6].Value;
+
+            // 作業時間を計算
+            var taskTime = DateTime.Parse(endTime.ToString()) - DateTime.Parse(startTime.ToString());
+
+            // 作業時間をセット
+            _form.TaskDataGridView.CurrentRow.Cells[7].Value = taskTime;
         }
     }
 }

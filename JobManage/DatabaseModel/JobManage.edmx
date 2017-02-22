@@ -73,12 +73,12 @@
         </EntityType>
         <EntityType Name="T_TASK_DETAIL">
           <Key>
-            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="USER_ID" />
             <PropertyRef Name="PROJECT_ID" />
             <PropertyRef Name="REGION_ID" />
             <PropertyRef Name="ANKEN_ID" />
           </Key>
-          <Property Name="SEQ" Type="integer" Nullable="false" />
+          <Property Name="USER_ID" Type="integer" Nullable="false" />
           <Property Name="PROJECT_ID" Type="integer" Nullable="false" />
           <Property Name="REGION_ID" Type="integer" Nullable="false" />
           <Property Name="ANKEN_ID" Type="integer" Nullable="false" />
@@ -170,12 +170,12 @@
         </EntityType>
         <EntityType Name="T_TASK_DETAIL">
           <Key>
-            <PropertyRef Name="SEQ" />
+            <PropertyRef Name="USER_ID" />
             <PropertyRef Name="PROJECT_ID" />
             <PropertyRef Name="REGION_ID" />
             <PropertyRef Name="ANKEN_ID" />
           </Key>
-          <Property Name="SEQ" Type="Int64" Nullable="false" />
+          <Property Name="USER_ID" Type="Int64" Nullable="false" />
           <Property Name="PROJECT_ID" Type="Int64" Nullable="false" />
           <Property Name="REGION_ID" Type="Int64" Nullable="false" />
           <Property Name="ANKEN_ID" Type="Int64" Nullable="false" />
@@ -264,7 +264,7 @@
           <EntitySetMapping Name="T_TASK_DETAIL">
             <EntityTypeMapping TypeName="JobManageModel.T_TASK_DETAIL">
               <MappingFragment StoreEntitySet="T_TASK_DETAIL">
-                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
                 <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT_ID" />
                 <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
                 <ScalarProperty Name="ANKEN_ID" ColumnName="ANKEN_ID" />
@@ -290,7 +290,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />

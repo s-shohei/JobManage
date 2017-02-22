@@ -4,19 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MetroFramework.Forms;
-using JobManage.Model;
 using JobManage.Form;
+using JobManage.Util;
+using JobManage.Const;
 
 namespace JobManage.Logic
 {
     public class OnClickStartButtonJM0002Form : AbstractButton
     {
         private JM0002Form _form;
-        private TaskDetailModel model;
 
         public override void ButtonStateChange()
         {
-            
+            _form.StartBtn.Enabled = false;
+            _form.EndBtn.Enabled = true;
+            _form.RegistBtn.Enabled = false;
+
         }
 
         /// <summary>
@@ -34,29 +37,35 @@ namespace JobManage.Logic
             // 初期処理
             this.init();
 
+            // ボタン制御
+            this.ButtonStateChange();
 
             return 0;
         }
 
         private void init()
         {
-            model = new TaskDetailModel();
 
-            // 各種コンボボックスの値を記憶
-            model.ProjectName = _form.ProjectCombBox.SelectedItem.ToString();
-            model.RegionName  = _form.RegionCombBox.SelectedItem.ToString();
-            model.AnkenName   = _form.AnkenCombBox.SelectedItem.ToString();
-            model.TaskName    = _form.TaskComboBox.SelectedItem.ToString();
-
-            // 現在の選択行数を取得
-            int rowNum = _form.TaskDataGridView.SelectedRows.Count;
+            // 開始時刻を取得
+            var startTime = TimerUtil.RoundDown(DateTime.Now, JMConst.INTERVAL_TIME).ToString();
 
             // GridViewに値をセット
-            _form.TaskDataGridView.Rows[rowNum].Cells[0].Value = rowNum + 1;
-            _form.TaskDataGridView.Rows[rowNum].Cells[1].Value = model.ProjectName;
-            _form.TaskDataGridView.Rows[rowNum].Cells[2].Value = model.RegionName;
-            _form.TaskDataGridView.Rows[rowNum].Cells[3].Value = model.AnkenName;
-            _form.TaskDataGridView.Rows[rowNum].Cells[4].Value = model.TaskName;
+            int row =_form.TaskDataGridView.Rows.Add(
+                "",
+                _form.ProjectCombBox.SelectedItem.ToString(),
+                _form.RegionCombBox.SelectedItem.ToString(),
+                _form.AnkenCombBox.SelectedItem.ToString(),
+                _form.TaskComboBox.SelectedItem.ToString(),
+                startTime,
+                "",
+                "",
+                ""
+            );
+
+            // 行選択
+            _form.TaskDataGridView.Rows[row].Selected = true;
+            _form.TaskDataGridView.CurrentCell = _form.TaskDataGridView.Rows[row].Cells[0];
+
         }
     }
 }

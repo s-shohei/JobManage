@@ -21,5 +21,7 @@ namespace JobManage.Const
             JM0001Form = 1,
             JM0002Form = 2
         }
+
+        public static TimeSpan INTERVAL_TIME = TimeSpan.FromMinutes(15);
     }
 }

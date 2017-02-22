@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MetroFramework.Forms;
 using JobManage.Form;
+using JobManage.Dao;
+using JobManage.DatabaseModel;
 
 namespace JobManage.Logic
 {
@@ -36,7 +38,8 @@ namespace JobManage.Logic
 
         private void init()
         {
-
+            // 行数を取得
+            
         }
     }
 }

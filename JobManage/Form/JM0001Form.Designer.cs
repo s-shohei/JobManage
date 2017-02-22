@@ -40,7 +40,7 @@
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Location = new System.Drawing.Point(53, 68);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(60, 19);
+            this.UserNameLabel.Size = new System.Drawing.Size(57, 19);
             this.UserNameLabel.TabIndex = 0;
             this.UserNameLabel.Text = "ユーザ名";
             // 
@@ -49,7 +49,7 @@
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Location = new System.Drawing.Point(53, 139);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(66, 19);
+            this.PasswordLabel.Size = new System.Drawing.Size(64, 19);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "パスワード";
             // 
@@ -67,7 +67,8 @@
             this.UserNameTextbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.UserNameTextbox.CustomButton.UseSelectable = true;
             this.UserNameTextbox.CustomButton.Visible = false;
-            this.UserNameTextbox.Lines = new string[0];
+            this.UserNameTextbox.Lines = new string[] {
+        "下津曲翔平"};
             this.UserNameTextbox.Location = new System.Drawing.Point(53, 90);
             this.UserNameTextbox.MaxLength = 32767;
             this.UserNameTextbox.Name = "UserNameTextbox";
@@ -79,6 +80,7 @@
             this.UserNameTextbox.ShortcutsEnabled = true;
             this.UserNameTextbox.Size = new System.Drawing.Size(170, 23);
             this.UserNameTextbox.TabIndex = 2;
+            this.UserNameTextbox.Text = "下津曲翔平";
             this.UserNameTextbox.UseSelectable = true;
             this.UserNameTextbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.UserNameTextbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -97,7 +99,8 @@
             this.PasswordTextbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.PasswordTextbox.CustomButton.UseSelectable = true;
             this.PasswordTextbox.CustomButton.Visible = false;
-            this.PasswordTextbox.Lines = new string[0];
+            this.PasswordTextbox.Lines = new string[] {
+        "1234"};
             this.PasswordTextbox.Location = new System.Drawing.Point(53, 161);
             this.PasswordTextbox.MaxLength = 32767;
             this.PasswordTextbox.Name = "PasswordTextbox";
@@ -109,6 +112,7 @@
             this.PasswordTextbox.ShortcutsEnabled = true;
             this.PasswordTextbox.Size = new System.Drawing.Size(170, 23);
             this.PasswordTextbox.TabIndex = 3;
+            this.PasswordTextbox.Text = "1234";
             this.PasswordTextbox.UseSelectable = true;
             this.PasswordTextbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.PasswordTextbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
