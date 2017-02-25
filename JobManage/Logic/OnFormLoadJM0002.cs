@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MetroFramework.Forms;
 using JobManage.Form;
-using JobManage.DatabaseModel;
+using JobManageCore.DatabaseModel;
 using JobManage.Dao;
 
 namespace JobManage.Logic

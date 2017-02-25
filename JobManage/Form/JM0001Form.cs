@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using JobManage.DatabaseModel;
+using JobManageCore.DatabaseModel;
 using MetroFramework.Forms;
 using JobManage.Logic;
 using JobManage.Const;
@@ -52,6 +52,8 @@ namespace JobManage
             }
             catch(Exception ex)
             {
+
+                MessageBox.Show(ex.Message);
                 // システムエラー
                 MessageBox.Show(ErrorMessageConst.ERR_MSG_SYSTEM_ERROR);
             }

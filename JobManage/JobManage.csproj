@@ -86,43 +86,6 @@
   <ItemGroup>
     <Compile Include="Const\JMConst.cs" />
     <Compile Include="Const\ErrorMessageConst.cs" />
-    <Compile Include="Dao\MUserDao.cs" />
-    <Compile Include="DatabaseModel\JobManage.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobManage.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\JobManage.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\JobManage.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobManage.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_ANKEN.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_PROJECT.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_REGION.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_SYOZOKU.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_TASK.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\M_USER.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel\T_TASK_DETAIL.cs">
-      <DependentUpon>JobManage.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form\JM0001Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,13 +127,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DatabaseModel\JobManage.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>JobManage.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DatabaseModel\JobManage.edmx.diagram">
-      <DependentUpon>JobManage.edmx</DependentUpon>
-    </None>
     <None Include="JobManage.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -198,18 +154,10 @@
       <Project>{e039e55d-d078-4dd6-aebc-dafb6b320093}</Project>
       <Name>JobManageAnalysis</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DatabaseModel\JobManage.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JobManage.edmx</DependentUpon>
-      <LastGenOutput>JobManage.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DatabaseModel\JobManage.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JobManage.edmx</DependentUpon>
-      <LastGenOutput>JobManage.cs</LastGenOutput>
-    </Content>
+    <ProjectReference Include="..\JobManageCore\JobManageCore.csproj">
+      <Project>{80d0abbb-18cc-4bb3-acd8-ec9521cd4b90}</Project>
+      <Name>JobManageCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net46\System.Data.SQLite.Core.targets')" />

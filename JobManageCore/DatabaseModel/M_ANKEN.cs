@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JobManage.DatabaseModel
+namespace JobManageCore.DatabaseModel
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class M_TASK
+    public partial class M_ANKEN
     {
         public long SEQ { get; set; }
-        public long TASK_ID { get; set; }
-        public string TASK_NAME { get; set; }
+        public long ANKEN_ID { get; set; }
+        public string ANKEN_NAME { get; set; }
         public long DEL_FLG { get; set; }
     }
 }

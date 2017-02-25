@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JobManage.DatabaseModel
+namespace JobManageCore.DatabaseModel
 {
     using System;
     using System.Data.Entity;

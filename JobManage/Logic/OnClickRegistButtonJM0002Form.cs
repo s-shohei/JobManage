@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MetroFramework.Forms;
 using JobManage.Form;
 using JobManage.Dao;
-using JobManage.DatabaseModel;
+using JobManageCore.DatabaseModel;
 
 namespace JobManage.Logic
 {

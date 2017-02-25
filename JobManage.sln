@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManage", "JobManage\JobM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManageAnalysis", "JobManageAnalysis\JobManageAnalysis.csproj", "{E039E55D-D078-4DD6-AEBC-DAFB6B320093}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManageCore", "JobManageCore\JobManageCore.csproj", "{80D0ABBB-18CC-4BB3-ACD8-EC9521CD4B90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E039E55D-D078-4DD6-AEBC-DAFB6B320093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E039E55D-D078-4DD6-AEBC-DAFB6B320093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E039E55D-D078-4DD6-AEBC-DAFB6B320093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D0ABBB-18CC-4BB3-ACD8-EC9521CD4B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D0ABBB-18CC-4BB3-ACD8-EC9521CD4B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D0ABBB-18CC-4BB3-ACD8-EC9521CD4B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D0ABBB-18CC-4BB3-ACD8-EC9521CD4B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

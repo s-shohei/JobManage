@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using JobManage.Dao;
 using JobManage.Logic;
 using MetroFramework.Forms;
-using JobManage.DatabaseModel;
+using JobManageCore.DatabaseModel;
 
 namespace JobManage.Logic
 {
