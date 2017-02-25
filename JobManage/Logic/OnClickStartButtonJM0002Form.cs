@@ -47,7 +47,7 @@ namespace JobManage.Logic
         {
 
             // 開始時刻を取得
-            var startTime = TimerUtil.RoundDown(DateTime.Now, JMConst.INTERVAL_TIME).ToString();
+            var startTime = DateTime.Now.ToString();
 
             // GridViewに値をセット
             int row =_form.TaskDataGridView.Rows.Add(

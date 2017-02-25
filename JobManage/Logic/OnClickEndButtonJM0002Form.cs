@@ -45,7 +45,7 @@ namespace JobManage.Logic
         private void init()
         {
             // 終了時間を取得してセット
-            _form.TaskDataGridView.CurrentRow.Cells[5].Value = TimerUtil.RoundUp(DateTime.Now, JMConst.INTERVAL_TIME);
+            _form.TaskDataGridView.CurrentRow.Cells[5].Value = DateTime.Now.ToString();
 
             // 開始・終了時間を取得
             var startTime = _form.TaskDataGridView.CurrentRow.Cells[4].Value;

@@ -62,7 +62,7 @@
             this.ProjectLabel.AutoSize = true;
             this.ProjectLabel.Location = new System.Drawing.Point(36, 58);
             this.ProjectLabel.Name = "ProjectLabel";
-            this.ProjectLabel.Size = new System.Drawing.Size(70, 19);
+            this.ProjectLabel.Size = new System.Drawing.Size(73, 19);
             this.ProjectLabel.TabIndex = 0;
             this.ProjectLabel.Text = "プロジェクト";
             // 
@@ -71,7 +71,7 @@
             this.RegionLabel.AutoSize = true;
             this.RegionLabel.Location = new System.Drawing.Point(182, 58);
             this.RegionLabel.Name = "RegionLabel";
-            this.RegionLabel.Size = new System.Drawing.Size(37, 19);
+            this.RegionLabel.Size = new System.Drawing.Size(39, 19);
             this.RegionLabel.TabIndex = 1;
             this.RegionLabel.Text = "領域";
             // 
@@ -80,7 +80,7 @@
             this.AnkenLabel.AutoSize = true;
             this.AnkenLabel.Location = new System.Drawing.Point(325, 58);
             this.AnkenLabel.Name = "AnkenLabel";
-            this.AnkenLabel.Size = new System.Drawing.Size(37, 19);
+            this.AnkenLabel.Size = new System.Drawing.Size(39, 19);
             this.AnkenLabel.TabIndex = 2;
             this.AnkenLabel.Text = "案件";
             // 
@@ -210,7 +210,7 @@
             this.TaskLabel.AutoSize = true;
             this.TaskLabel.Location = new System.Drawing.Point(647, 58);
             this.TaskLabel.Name = "TaskLabel";
-            this.TaskLabel.Size = new System.Drawing.Size(65, 19);
+            this.TaskLabel.Size = new System.Drawing.Size(69, 19);
             this.TaskLabel.TabIndex = 10;
             this.TaskLabel.Text = "作業項目";
             // 
@@ -228,6 +228,7 @@
             // 
             this.プロジェクト.HeaderText = "プロジェクト";
             this.プロジェクト.Name = "プロジェクト";
+            this.プロジェクト.ReadOnly = true;
             // 
             // 領域
             // 
@@ -269,7 +270,6 @@
             // 
             this.備考.HeaderText = "備考";
             this.備考.Name = "備考";
-            this.備考.ReadOnly = true;
             // 
             // JM0002Form
             // 
