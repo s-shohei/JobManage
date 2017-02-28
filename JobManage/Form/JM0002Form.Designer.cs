@@ -44,8 +44,6 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.RegistBtn = new MetroFramework.Controls.MetroButton();
             this.TaskDataGridView = new MetroFramework.Controls.MetroGrid();
-            this.TaskLabel = new MetroFramework.Controls.MetroLabel();
-            this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
             this.プロジェクト = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.領域 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.案件 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +52,8 @@
             this.終了時刻 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.作業時間 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.備考 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaskLabel = new MetroFramework.Controls.MetroLabel();
+            this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,9 +153,10 @@
             // TaskDataGridView
             // 
             this.TaskDataGridView.AllowUserToResizeRows = false;
+            this.TaskDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.TaskDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TaskDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.TaskDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -205,6 +206,61 @@
             this.TaskDataGridView.Size = new System.Drawing.Size(1005, 235);
             this.TaskDataGridView.TabIndex = 9;
             // 
+            // プロジェクト
+            // 
+            this.プロジェクト.HeaderText = "プロジェクト";
+            this.プロジェクト.Name = "プロジェクト";
+            this.プロジェクト.ReadOnly = true;
+            this.プロジェクト.Width = 102;
+            // 
+            // 領域
+            // 
+            this.領域.HeaderText = "領域";
+            this.領域.Name = "領域";
+            this.領域.ReadOnly = true;
+            this.領域.Width = 54;
+            // 
+            // 案件
+            // 
+            this.案件.HeaderText = "案件";
+            this.案件.Name = "案件";
+            this.案件.ReadOnly = true;
+            this.案件.Width = 54;
+            // 
+            // 作業項目
+            // 
+            this.作業項目.HeaderText = "作業項目";
+            this.作業項目.Name = "作業項目";
+            this.作業項目.ReadOnly = true;
+            this.作業項目.Width = 78;
+            // 
+            // 開始時刻
+            // 
+            this.開始時刻.HeaderText = "開始時刻";
+            this.開始時刻.Name = "開始時刻";
+            this.開始時刻.ReadOnly = true;
+            this.開始時刻.Width = 78;
+            // 
+            // 終了時刻
+            // 
+            this.終了時刻.HeaderText = "終了時刻";
+            this.終了時刻.Name = "終了時刻";
+            this.終了時刻.ReadOnly = true;
+            this.終了時刻.Width = 78;
+            // 
+            // 作業時間
+            // 
+            this.作業時間.HeaderText = "作業時間";
+            this.作業時間.Name = "作業時間";
+            this.作業時間.ReadOnly = true;
+            this.作業時間.Width = 78;
+            // 
+            // 備考
+            // 
+            this.備考.HeaderText = "備考";
+            this.備考.Name = "備考";
+            this.備考.Width = 54;
+            // 
             // TaskLabel
             // 
             this.TaskLabel.AutoSize = true;
@@ -223,53 +279,6 @@
             this.TaskComboBox.Size = new System.Drawing.Size(208, 29);
             this.TaskComboBox.TabIndex = 11;
             this.TaskComboBox.UseSelectable = true;
-            // 
-            // プロジェクト
-            // 
-            this.プロジェクト.HeaderText = "プロジェクト";
-            this.プロジェクト.Name = "プロジェクト";
-            this.プロジェクト.ReadOnly = true;
-            // 
-            // 領域
-            // 
-            this.領域.HeaderText = "領域";
-            this.領域.Name = "領域";
-            this.領域.ReadOnly = true;
-            // 
-            // 案件
-            // 
-            this.案件.HeaderText = "案件";
-            this.案件.Name = "案件";
-            this.案件.ReadOnly = true;
-            // 
-            // 作業項目
-            // 
-            this.作業項目.HeaderText = "作業項目";
-            this.作業項目.Name = "作業項目";
-            this.作業項目.ReadOnly = true;
-            // 
-            // 開始時刻
-            // 
-            this.開始時刻.HeaderText = "開始時刻";
-            this.開始時刻.Name = "開始時刻";
-            this.開始時刻.ReadOnly = true;
-            // 
-            // 終了時刻
-            // 
-            this.終了時刻.HeaderText = "終了時刻";
-            this.終了時刻.Name = "終了時刻";
-            this.終了時刻.ReadOnly = true;
-            // 
-            // 作業時間
-            // 
-            this.作業時間.HeaderText = "作業時間";
-            this.作業時間.Name = "作業時間";
-            this.作業時間.ReadOnly = true;
-            // 
-            // 備考
-            // 
-            this.備考.HeaderText = "備考";
-            this.備考.Name = "備考";
             // 
             // JM0002Form
             // 
