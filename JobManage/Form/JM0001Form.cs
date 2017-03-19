@@ -12,6 +12,7 @@ using MetroFramework.Forms;
 using JobManage.Logic;
 using JobManage.Const;
 using JobManage.Form;
+using JobManageMasterMente;
 
 namespace JobManage
 {
@@ -57,6 +58,13 @@ namespace JobManage
                 // システムエラー
                 MessageBox.Show(ErrorMessageConst.ERR_MSG_SYSTEM_ERROR);
             }
+        }
+
+        private void MasterButton_Click(object sender, EventArgs e)
+        {
+            JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
+            form.Show();
+            this.Hide();
         }
     }
 }

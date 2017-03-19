@@ -33,6 +33,7 @@
             this.UserNameTextbox = new MetroFramework.Controls.MetroTextBox();
             this.PasswordTextbox = new MetroFramework.Controls.MetroTextBox();
             this.LoginBtn = new MetroFramework.Controls.MetroButton();
+            this.MasterButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // UserNameLabel
@@ -40,7 +41,7 @@
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Location = new System.Drawing.Point(53, 68);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(57, 19);
+            this.UserNameLabel.Size = new System.Drawing.Size(60, 19);
             this.UserNameLabel.TabIndex = 0;
             this.UserNameLabel.Text = "ユーザ名";
             // 
@@ -49,7 +50,7 @@
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Location = new System.Drawing.Point(53, 139);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(64, 19);
+            this.PasswordLabel.Size = new System.Drawing.Size(66, 19);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "パスワード";
             // 
@@ -127,11 +128,22 @@
             this.LoginBtn.UseSelectable = true;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
+            // MasterButton
+            // 
+            this.MasterButton.Location = new System.Drawing.Point(7, 206);
+            this.MasterButton.Name = "MasterButton";
+            this.MasterButton.Size = new System.Drawing.Size(75, 23);
+            this.MasterButton.TabIndex = 5;
+            this.MasterButton.Text = "マスタ";
+            this.MasterButton.UseSelectable = true;
+            this.MasterButton.Click += new System.EventHandler(this.MasterButton_Click);
+            // 
             // JM0001Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.MasterButton);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.UserNameTextbox);
@@ -152,5 +164,6 @@
         internal MetroFramework.Controls.MetroTextBox UserNameTextbox;
         internal MetroFramework.Controls.MetroTextBox PasswordTextbox;
         internal MetroFramework.Controls.MetroButton LoginBtn;
+        private MetroFramework.Controls.MetroButton MasterButton;
     }
 }
