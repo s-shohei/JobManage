@@ -90,6 +90,7 @@
     <Compile Include="JobManageMasterMente.Designer.cs">
       <DependentUpon>JobManageMasterMente.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterDataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectMasterMente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

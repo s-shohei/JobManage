@@ -13,6 +13,8 @@ namespace JobManageMasterMente
 {
     public partial class JobManageMasterMente : MetroForm
     {
+        AbstractMasterMente masterMente;
+
         public JobManageMasterMente()
         {
             InitializeComponent();
@@ -25,8 +27,15 @@ namespace JobManageMasterMente
 
         private void MasterGetButton_Click(object sender, EventArgs e)
         {
-            AbstractMasterMente masterMente;
-            string masterName = MasterComboBox.SelectedItem.ToString();
+            string masterName = "";
+            if (MasterComboBox.SelectedIndex !=-1)
+            {
+                masterName = MasterComboBox.SelectedItem.ToString();
+            }
+            else
+            {
+                return;
+            }
 
             switch(masterName)
             {
@@ -47,6 +56,12 @@ namespace JobManageMasterMente
                     masterMente.Display();
                     break;
             }
+        }
+
+        private void MasterInsButton_Click(object sender, EventArgs e)
+        {
+            masterMente.Insert();
+            masterMente.Display();
         }
     }
 }
