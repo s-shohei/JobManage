@@ -130,7 +130,7 @@
             // 
             // MasterButton
             // 
-            this.MasterButton.Location = new System.Drawing.Point(7, 206);
+            this.MasterButton.Location = new System.Drawing.Point(148, 235);
             this.MasterButton.Name = "MasterButton";
             this.MasterButton.Size = new System.Drawing.Size(75, 23);
             this.MasterButton.TabIndex = 5;

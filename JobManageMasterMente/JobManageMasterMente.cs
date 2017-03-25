@@ -63,5 +63,10 @@ namespace JobManageMasterMente
             masterMente.Insert();
             masterMente.Display();
         }
+
+        private void EndButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

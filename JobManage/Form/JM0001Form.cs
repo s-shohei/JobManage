@@ -64,7 +64,7 @@ namespace JobManage
         {
             JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
             form.Show();
-            this.Hide();
+            //this.Hide();
         }
     }
 }
