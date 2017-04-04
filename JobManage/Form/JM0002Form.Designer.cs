@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JM0002Form));
             this.ProjectLabel = new MetroFramework.Controls.MetroLabel();
             this.RegionLabel = new MetroFramework.Controls.MetroLabel();
             this.AnkenLabel = new MetroFramework.Controls.MetroLabel();
@@ -41,7 +42,6 @@
             this.StartBtn = new MetroFramework.Controls.MetroButton();
             this.EndBtn = new MetroFramework.Controls.MetroButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.RegistBtn = new MetroFramework.Controls.MetroButton();
             this.TaskDataGridView = new MetroFramework.Controls.MetroGrid();
             this.プロジェクト = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@
             this.ProjectLabel.AutoSize = true;
             this.ProjectLabel.Location = new System.Drawing.Point(36, 58);
             this.ProjectLabel.Name = "ProjectLabel";
-            this.ProjectLabel.Size = new System.Drawing.Size(73, 19);
+            this.ProjectLabel.Size = new System.Drawing.Size(70, 19);
             this.ProjectLabel.TabIndex = 0;
             this.ProjectLabel.Text = "プロジェクト";
             // 
@@ -71,7 +71,7 @@
             this.RegionLabel.AutoSize = true;
             this.RegionLabel.Location = new System.Drawing.Point(182, 58);
             this.RegionLabel.Name = "RegionLabel";
-            this.RegionLabel.Size = new System.Drawing.Size(39, 19);
+            this.RegionLabel.Size = new System.Drawing.Size(37, 19);
             this.RegionLabel.TabIndex = 1;
             this.RegionLabel.Text = "領域";
             // 
@@ -80,7 +80,7 @@
             this.AnkenLabel.AutoSize = true;
             this.AnkenLabel.Location = new System.Drawing.Point(325, 58);
             this.AnkenLabel.Name = "AnkenLabel";
-            this.AnkenLabel.Size = new System.Drawing.Size(39, 19);
+            this.AnkenLabel.Size = new System.Drawing.Size(37, 19);
             this.AnkenLabel.TabIndex = 2;
             this.AnkenLabel.Text = "案件";
             // 
@@ -134,11 +134,6 @@
             this.EndBtn.Text = "終了";
             this.EndBtn.UseSelectable = true;
             this.EndBtn.Click += new System.EventHandler(this.EndBtn_Click);
-            // 
-            // notifyIcon
-            // 
-            this.notifyIcon.Text = "notifyIcon1";
-            this.notifyIcon.Visible = true;
             // 
             // RegistBtn
             // 
@@ -211,62 +206,62 @@
             this.プロジェクト.HeaderText = "プロジェクト";
             this.プロジェクト.Name = "プロジェクト";
             this.プロジェクト.ReadOnly = true;
-            this.プロジェクト.Width = 102;
+            this.プロジェクト.Width = 97;
             // 
             // 領域
             // 
             this.領域.HeaderText = "領域";
             this.領域.Name = "領域";
             this.領域.ReadOnly = true;
-            this.領域.Width = 54;
+            this.領域.Width = 67;
             // 
             // 案件
             // 
             this.案件.HeaderText = "案件";
             this.案件.Name = "案件";
             this.案件.ReadOnly = true;
-            this.案件.Width = 54;
+            this.案件.Width = 67;
             // 
             // 作業項目
             // 
             this.作業項目.HeaderText = "作業項目";
             this.作業項目.Name = "作業項目";
             this.作業項目.ReadOnly = true;
-            this.作業項目.Width = 78;
+            this.作業項目.Width = 93;
             // 
             // 開始時刻
             // 
             this.開始時刻.HeaderText = "開始時刻";
             this.開始時刻.Name = "開始時刻";
             this.開始時刻.ReadOnly = true;
-            this.開始時刻.Width = 78;
+            this.開始時刻.Width = 93;
             // 
             // 終了時刻
             // 
             this.終了時刻.HeaderText = "終了時刻";
             this.終了時刻.Name = "終了時刻";
             this.終了時刻.ReadOnly = true;
-            this.終了時刻.Width = 78;
+            this.終了時刻.Width = 93;
             // 
             // 作業時間
             // 
             this.作業時間.HeaderText = "作業時間";
             this.作業時間.Name = "作業時間";
             this.作業時間.ReadOnly = true;
-            this.作業時間.Width = 78;
+            this.作業時間.Width = 93;
             // 
             // 備考
             // 
             this.備考.HeaderText = "備考";
             this.備考.Name = "備考";
-            this.備考.Width = 54;
+            this.備考.Width = 67;
             // 
             // TaskLabel
             // 
             this.TaskLabel.AutoSize = true;
             this.TaskLabel.Location = new System.Drawing.Point(647, 58);
             this.TaskLabel.Name = "TaskLabel";
-            this.TaskLabel.Size = new System.Drawing.Size(69, 19);
+            this.TaskLabel.Size = new System.Drawing.Size(65, 19);
             this.TaskLabel.TabIndex = 10;
             this.TaskLabel.Text = "作業項目";
             // 
@@ -297,10 +292,12 @@
             this.Controls.Add(this.AnkenLabel);
             this.Controls.Add(this.RegionLabel);
             this.Controls.Add(this.ProjectLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "JM0002Form";
             this.Text = "MainMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JM0002Form_Closing);
             this.Load += new System.EventHandler(this.JM0002Form_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.JM0002Form_ClientSizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,7 +315,6 @@
         internal MetroFramework.Controls.MetroButton StartBtn;
         internal MetroFramework.Controls.MetroButton EndBtn;
         internal System.Windows.Forms.Timer timer;
-        internal System.Windows.Forms.NotifyIcon notifyIcon;
         internal MetroFramework.Controls.MetroButton RegistBtn;
         internal MetroFramework.Controls.MetroGrid TaskDataGridView;
         internal MetroFramework.Controls.MetroLabel TaskLabel;

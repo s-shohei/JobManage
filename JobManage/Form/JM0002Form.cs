@@ -21,6 +21,7 @@ namespace JobManage.Form
         {
             InitializeComponent();
             this._jm0001form = jm0001form;
+            this.Icon = new System.Drawing.Icon(@".\JM.ico");
         }
 
         private void JM0002Form_Load(object sender, EventArgs e)
@@ -29,18 +30,6 @@ namespace JobManage.Form
             FormLoadFactory factory = new FormLoadFactory();
             AbstractFormLoad formload = factory.CreateFormLoad(Const.JMConst.FormId.JM0002Form);
             formload.OnLoad(this);
-        }
-        private void JM0002Form_Closing(object sender, FormClosingEventArgs e)
-        {
-            //JM0001Formクローズ
-            _jm0001form.Close();
-            //フォームを最小化
-
-            //イベントキャンセル
-
-            //フォームの状態で分岐
-
-
         }
         /// <summary>
         /// 開始ボタン押下時
@@ -88,6 +77,20 @@ namespace JobManage.Form
             {
                 MessageBox.Show("登録完了！");
             }
+        }
+
+        private void JM0002Form_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Minimized)
+            {
+                // フォームが最小化の状態であればフォームを非表示にする
+                this.Hide();
+            }
+        }
+
+        private void JM0002Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
