@@ -56,9 +56,12 @@ namespace JobManage.Form
             // factory生成
             ButtonFactory factory = new ButtonFactory();
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton end_button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton regist = factory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
             // ボタン押下時の処理を実行
-            button.OnClickLogic(this);
+            // 終了ボタン押下時にDB登録も実行
+            end_button.OnClickLogic(this);
+            regist.OnClickLogic(this);
         }
 
         /// <summary>
