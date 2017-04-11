@@ -95,5 +95,11 @@ namespace JobManage.Form
         {
             this.Dispose();
         }
+
+        private void MasterButton_Click(object sender, EventArgs e)
+        {
+            JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
+            form.Show();
+        }
     }
 }

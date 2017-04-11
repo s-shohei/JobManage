@@ -54,6 +54,7 @@
             this.備考 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaskLabel = new MetroFramework.Controls.MetroLabel();
             this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.MasterButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,55 +207,55 @@
             this.プロジェクト.HeaderText = "プロジェクト";
             this.プロジェクト.Name = "プロジェクト";
             this.プロジェクト.ReadOnly = true;
-            this.プロジェクト.Width = 97;
+            this.プロジェクト.Width = 86;
             // 
             // 領域
             // 
             this.領域.HeaderText = "領域";
             this.領域.Name = "領域";
             this.領域.ReadOnly = true;
-            this.領域.Width = 67;
+            this.領域.Width = 56;
             // 
             // 案件
             // 
             this.案件.HeaderText = "案件";
             this.案件.Name = "案件";
             this.案件.ReadOnly = true;
-            this.案件.Width = 67;
+            this.案件.Width = 56;
             // 
             // 作業項目
             // 
             this.作業項目.HeaderText = "作業項目";
             this.作業項目.Name = "作業項目";
             this.作業項目.ReadOnly = true;
-            this.作業項目.Width = 93;
+            this.作業項目.Width = 82;
             // 
             // 開始時刻
             // 
             this.開始時刻.HeaderText = "開始時刻";
             this.開始時刻.Name = "開始時刻";
             this.開始時刻.ReadOnly = true;
-            this.開始時刻.Width = 93;
+            this.開始時刻.Width = 82;
             // 
             // 終了時刻
             // 
             this.終了時刻.HeaderText = "終了時刻";
             this.終了時刻.Name = "終了時刻";
             this.終了時刻.ReadOnly = true;
-            this.終了時刻.Width = 93;
+            this.終了時刻.Width = 82;
             // 
             // 作業時間
             // 
             this.作業時間.HeaderText = "作業時間";
             this.作業時間.Name = "作業時間";
             this.作業時間.ReadOnly = true;
-            this.作業時間.Width = 93;
+            this.作業時間.Width = 82;
             // 
             // 備考
             // 
             this.備考.HeaderText = "備考";
             this.備考.Name = "備考";
-            this.備考.Width = 67;
+            this.備考.Width = 56;
             // 
             // TaskLabel
             // 
@@ -275,11 +276,22 @@
             this.TaskComboBox.TabIndex = 11;
             this.TaskComboBox.UseSelectable = true;
             // 
+            // MasterButton
+            // 
+            this.MasterButton.Location = new System.Drawing.Point(876, 38);
+            this.MasterButton.Name = "MasterButton";
+            this.MasterButton.Size = new System.Drawing.Size(156, 23);
+            this.MasterButton.TabIndex = 12;
+            this.MasterButton.Text = "マスタメンテ";
+            this.MasterButton.UseSelectable = true;
+            this.MasterButton.Click += new System.EventHandler(this.MasterButton_Click);
+            // 
             // JM0002Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 435);
+            this.Controls.Add(this.MasterButton);
             this.Controls.Add(this.TaskComboBox);
             this.Controls.Add(this.TaskLabel);
             this.Controls.Add(this.TaskDataGridView);
@@ -327,5 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 終了時刻;
         private System.Windows.Forms.DataGridViewTextBoxColumn 作業時間;
         private System.Windows.Forms.DataGridViewTextBoxColumn 備考;
+        private MetroFramework.Controls.MetroButton MasterButton;
     }
 }

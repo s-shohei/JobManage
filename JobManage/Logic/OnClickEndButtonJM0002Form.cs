@@ -17,7 +17,7 @@ namespace JobManage.Logic
         public override void ButtonStateChange()
         {
             _form.StartBtn.Enabled = true;
-            _form.EndBtn.Enabled = false;
+            //_form.EndBtn.Enabled = false;
             _form.RegistBtn.Enabled = true;
         }
 
@@ -44,11 +44,24 @@ namespace JobManage.Logic
 
         private void init()
         {
+            // 現在の選択数を取得
+            if(_form.TaskDataGridView.CurrentRow == null)
+            {
+                return;
+            }
+
+            // 開始時刻を取得
+            var startTime = _form.TaskDataGridView.CurrentRow.Cells[4].Value;
+            if(startTime == null)
+            {
+                // 現在の選択行にデータが入っていないとみなし処理しない
+                return;
+            }
+
             // 終了時間を取得してセット
             _form.TaskDataGridView.CurrentRow.Cells[5].Value = DateTime.Now.ToString();
 
-            // 開始・終了時間を取得
-            var startTime = _form.TaskDataGridView.CurrentRow.Cells[4].Value;
+            // 終了時間を取得
             var endTime = _form.TaskDataGridView.CurrentRow.Cells[5].Value;
 
             // 作業時間を計算
