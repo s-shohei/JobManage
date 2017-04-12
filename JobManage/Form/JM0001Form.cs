@@ -18,9 +18,12 @@ namespace JobManage
 {
     public partial class JM0001Form : MetroForm
     {
+        private Boolean _loginFlg = false;
+
         public JM0001Form()
         {
            InitializeComponent();
+            this.Icon = new System.Drawing.Icon(@".\JM.ico");
         }
 
         private void JM0001Form_Load(object sender, EventArgs e)
@@ -41,6 +44,7 @@ namespace JobManage
                         JM0002Form JM0002Form = new JM0002Form(this);
                         JM0002Form.Show();
                         this.Hide();
+                        _loginFlg = true;
                         break;
 
                     case 1:
@@ -63,6 +67,50 @@ namespace JobManage
             JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
             form.Show();
             //this.Hide();
+        }
+
+        private void 終了ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon.Visible = false;
+            this.Dispose();
+            Application.Exit();
+        }
+
+        private void JM0001Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // トレイリストのアイコンを非表示にする
+            notifyIcon.Visible = false;
+
+            // 現在の状態が最小化の状態であれば通常の状態に戻す
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                e.Cancel = true;
+            }
+        }
+
+        private void JM0001Form_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Minimized)
+            {
+                // フォームが最小化の状態であればフォームを非表示にする
+                this.Hide();
+                // トレイリストのアイコンを表示する
+                notifyIcon.Visible = true;
+            }
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            // フォームを表示する
+            this.Visible = true;
+            // 現在の状態が最小化の状態であれば通常の状態に戻す
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            // フォームをアクティブにする
+            this.Activate();
         }
     }
 }

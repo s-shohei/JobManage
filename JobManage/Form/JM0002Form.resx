@@ -120,9 +120,6 @@
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>108, 17</value>
-  </metadata>
   <metadata name="プロジェクト.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -147,4 +144,29 @@
   <metadata name="備考.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/fHwHxuxIL7rYPFO62DxTxvBIL/+EfAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA//YuAOuzERnmqAtQ4aEIht+dBqDfnQag4aEIhuaoC1DrsxIZ//wxAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA8L0nBOmvFjnioguj3JcG5diRBPrWjgL+1o4C/tiRBPrclwbl4qILoumv
+        FjjwvScEAAAAAAAAAAAAAAAA+duHAeu0JznjpA663ZgE+t+hJf/jr0f/5bVV/+W0Vf/jr0f/36Ek/92Y
+        BPrkpA6567QnOPnaggEAAAAAAAAAAPDASxjqsy+i5q4v+uWuNf/puVH/7sl4//flvv/35L3/7sl3/+m5
+        UP/lrjX/564v+uqzL6HwwEsYAAAAAPnguALvvUNP7bo85fPTh//z0H3/8cxw//LNc//114z/9deM//LN
+        c//xzHD/89B9//PTh//tujvk771DTvrjvwH1040K77w+hO+8N/r11YP/7rgr/+yvD//srw//7K8O/+yv
+        Dv/srw//7K8P/+64LP/11YP/77s2+u+9P4L1048K9dKLE++9PZ3vuzL+9dR9/+20G//rqwD/66sA/+ur
+        AP/rqwD/66sA/+urAP/ttBz/9dR9/++7MP7vvT6c9dOME/bVkxPwwUud78A//vXXhf/uuSr/67EO/+ux
+        D//rsQ//67EP/+uxD//rsQ7/7ror//XXhf/vvz7+8MFMnPbVlBL32JwK88x3gvPPfPr34az/8spu//DE
+        XP/wxFz/8MRc//DEXP/wxFz/8MRc//LLb//34a3/8898+fPMd4H32JwK99meAfXUlEz33Kbj++zO//nj
+        uP/4367/+N+u//jfrf/4367/+N+u//jfrv/547j/++zO//fcpuL11JRL99meAQAAAAD11JIX99mdnvni
+        s/n55Lr/+eS5//nkuf/55Lj/+eS5//nkuf/55Lj/+eS5//jis/n22Zyd9dSSFgAAAAAAAAAA9M+CAPTN
+        eTXzy3G188xz+fTNeP/0znv/9M58//TOfP/0znv/9M14//PMcvnzy3C09M13NPTOgAAAAAAAAAAAAAAA
+        AADwv0UE8MFINfHCSp3xw1Li8sdh+fTQff300H398sdh+fHDUeHxwUmc8MFHNPC/QwQAAAAAAAAAAAAA
+        AAAAAAAAAAAAANJPAADvuiMW77wuSvHBQ3/0zm2Z9M5tmfHBQ3/vvC5J77ojFc07AAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAOaZAAHutg0J77oiEe+6IhHutgwJ5pYAAQAAAAAAAAAAAAAAAAAA
+        AAAAAAAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMAD
+        AADgBwAA+B8AAA==
+</value>
+  </data>
 </root>

@@ -21,6 +21,7 @@ namespace JobManage.Form
         {
             InitializeComponent();
             this._jm0001form = jm0001form;
+            this.Icon = new System.Drawing.Icon(@".\JM.ico");
         }
 
         private void JM0002Form_Load(object sender, EventArgs e)
@@ -29,18 +30,6 @@ namespace JobManage.Form
             FormLoadFactory factory = new FormLoadFactory();
             AbstractFormLoad formload = factory.CreateFormLoad(Const.JMConst.FormId.JM0002Form);
             formload.OnLoad(this);
-        }
-        private void JM0002Form_Closing(object sender, FormClosingEventArgs e)
-        {
-            //JM0001Formクローズ
-            _jm0001form.Close();
-            //フォームを最小化
-
-            //イベントキャンセル
-
-            //フォームの状態で分岐
-
-
         }
         /// <summary>
         /// 開始ボタン押下時
@@ -63,9 +52,11 @@ namespace JobManage.Form
         private void EndBtn_Click(object sender, EventArgs e)
         {
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
             // ボタン押下時の処理を実行
-            button.OnClickLogic(this);
+            // 終了ボタン押下時にDB登録も実行
+            end_button.OnClickLogic(this);
+            regist.OnClickLogic(this);
         }
 
         /// <summary>
@@ -89,6 +80,26 @@ namespace JobManage.Form
             JM0003Form JM0003Form = new JM0003Form();
             JM0003Form.Show();
             //this.Hide();
+        }
+
+        private void JM0002Form_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == System.Windows.Forms.FormWindowState.Minimized)
+            {
+                // フォームが最小化の状態であればフォームを非表示にする
+                this.Hide();
+            }
+        }
+
+        private void JM0002Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void MasterButton_Click(object sender, EventArgs e)
+        {
+            JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
+            form.Show();
         }
     }
 }

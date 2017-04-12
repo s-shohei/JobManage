@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JM0001Form));
             this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
             this.PasswordLabel = new MetroFramework.Controls.MetroLabel();
             this.UserNameTextbox = new MetroFramework.Controls.MetroTextBox();
             this.PasswordTextbox = new MetroFramework.Controls.MetroTextBox();
             this.LoginBtn = new MetroFramework.Controls.MetroButton();
             this.MasterButton = new MetroFramework.Controls.MetroButton();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // UserNameLabel
@@ -41,7 +47,7 @@
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Location = new System.Drawing.Point(53, 68);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(60, 19);
+            this.UserNameLabel.Size = new System.Drawing.Size(57, 19);
             this.UserNameLabel.TabIndex = 0;
             this.UserNameLabel.Text = "ユーザ名";
             // 
@@ -50,7 +56,7 @@
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Location = new System.Drawing.Point(53, 139);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(66, 19);
+            this.PasswordLabel.Size = new System.Drawing.Size(64, 19);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "パスワード";
             // 
@@ -138,6 +144,29 @@
             this.MasterButton.UseSelectable = true;
             this.MasterButton.Click += new System.EventHandler(this.MasterButton_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.ContextMenuStrip = this.metroContextMenu;
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "JM";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            // 
+            // metroContextMenu
+            // 
+            this.metroContextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.metroContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.終了ToolStripMenuItem});
+            this.metroContextMenu.Name = "metroContextMenu";
+            this.metroContextMenu.Size = new System.Drawing.Size(134, 34);
+            // 
+            // 終了ToolStripMenuItem
+            // 
+            this.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
+            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(133, 30);
+            this.終了ToolStripMenuItem.Text = "終了";
+            this.終了ToolStripMenuItem.Click += new System.EventHandler(this.終了ToolStripMenuItem_Click);
+            // 
             // JM0001Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -151,7 +180,10 @@
             this.Controls.Add(this.UserNameLabel);
             this.Name = "JM0001Form";
             this.Text = "JobManager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JM0001Form_FormClosing);
             this.Load += new System.EventHandler(this.JM0001Form_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.JM0001Form_ClientSizeChanged);
+            this.metroContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +197,8 @@
         internal MetroFramework.Controls.MetroTextBox PasswordTextbox;
         internal MetroFramework.Controls.MetroButton LoginBtn;
         private MetroFramework.Controls.MetroButton MasterButton;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
     }
 }
