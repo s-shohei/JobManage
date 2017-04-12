@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JM0002Form));
             this.ProjectLabel = new MetroFramework.Controls.MetroLabel();
             this.RegionLabel = new MetroFramework.Controls.MetroLabel();
             this.AnkenLabel = new MetroFramework.Controls.MetroLabel();
@@ -41,6 +42,7 @@
             this.StartBtn = new MetroFramework.Controls.MetroButton();
             this.EndBtn = new MetroFramework.Controls.MetroButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.RegistBtn = new MetroFramework.Controls.MetroButton();
             this.TaskDataGridView = new MetroFramework.Controls.MetroGrid();
             this.プロジェクト = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +55,8 @@
             this.備考 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TaskLabel = new MetroFramework.Controls.MetroLabel();
             this.TaskComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.AggButton = new MetroFramework.Controls.MetroButton();
+            this.MasterButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.TaskDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,6 +138,11 @@
             this.EndBtn.UseSelectable = true;
             this.EndBtn.Click += new System.EventHandler(this.EndBtn_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
             // RegistBtn
             // 
             this.RegistBtn.Location = new System.Drawing.Point(957, 383);
@@ -152,14 +161,14 @@
             this.TaskDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TaskDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.TaskDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TaskDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TaskDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.プロジェクト,
@@ -170,14 +179,14 @@
             this.終了時刻,
             this.作業時間,
             this.備考});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TaskDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.TaskDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.TaskDataGridView.EnableHeadersVisualStyles = false;
             this.TaskDataGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -186,14 +195,14 @@
             this.TaskDataGridView.MultiSelect = false;
             this.TaskDataGridView.Name = "TaskDataGridView";
             this.TaskDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TaskDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaskDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.TaskDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.TaskDataGridView.RowTemplate.Height = 21;
             this.TaskDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -205,55 +214,55 @@
             this.プロジェクト.HeaderText = "プロジェクト";
             this.プロジェクト.Name = "プロジェクト";
             this.プロジェクト.ReadOnly = true;
-            this.プロジェクト.Width = 102;
+            this.プロジェクト.Width = 86;
             // 
             // 領域
             // 
             this.領域.HeaderText = "領域";
             this.領域.Name = "領域";
             this.領域.ReadOnly = true;
-            this.領域.Width = 54;
+            this.領域.Width = 56;
             // 
             // 案件
             // 
             this.案件.HeaderText = "案件";
             this.案件.Name = "案件";
             this.案件.ReadOnly = true;
-            this.案件.Width = 54;
+            this.案件.Width = 56;
             // 
             // 作業項目
             // 
             this.作業項目.HeaderText = "作業項目";
             this.作業項目.Name = "作業項目";
             this.作業項目.ReadOnly = true;
-            this.作業項目.Width = 78;
+            this.作業項目.Width = 82;
             // 
             // 開始時刻
             // 
             this.開始時刻.HeaderText = "開始時刻";
             this.開始時刻.Name = "開始時刻";
             this.開始時刻.ReadOnly = true;
-            this.開始時刻.Width = 78;
+            this.開始時刻.Width = 82;
             // 
             // 終了時刻
             // 
             this.終了時刻.HeaderText = "終了時刻";
             this.終了時刻.Name = "終了時刻";
             this.終了時刻.ReadOnly = true;
-            this.終了時刻.Width = 78;
+            this.終了時刻.Width = 82;
             // 
             // 作業時間
             // 
             this.作業時間.HeaderText = "作業時間";
             this.作業時間.Name = "作業時間";
             this.作業時間.ReadOnly = true;
-            this.作業時間.Width = 78;
+            this.作業時間.Width = 82;
             // 
             // 備考
             // 
             this.備考.HeaderText = "備考";
             this.備考.Name = "備考";
-            this.備考.Width = 54;
+            this.備考.Width = 56;
             // 
             // TaskLabel
             // 
@@ -274,11 +283,33 @@
             this.TaskComboBox.TabIndex = 11;
             this.TaskComboBox.UseSelectable = true;
             // 
+            // AggButton
+            // 
+            this.AggButton.Location = new System.Drawing.Point(47, 378);
+            this.AggButton.Name = "AggButton";
+            this.AggButton.Size = new System.Drawing.Size(75, 23);
+            this.AggButton.TabIndex = 12;
+            this.AggButton.Text = "集計";
+            this.AggButton.UseSelectable = true;
+            this.AggButton.Click += new System.EventHandler(this.AggButton_Click);
+            // 
+            // MasterButton
+            // 
+            this.MasterButton.Location = new System.Drawing.Point(876, 38);
+            this.MasterButton.Name = "MasterButton";
+            this.MasterButton.Size = new System.Drawing.Size(156, 23);
+            this.MasterButton.TabIndex = 13;
+            this.MasterButton.Text = "マスタ";
+            this.MasterButton.UseSelectable = true;
+            this.MasterButton.Click += new System.EventHandler(this.MasterButton_Click_1);
+            // 
             // JM0002Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 435);
+            this.Controls.Add(this.MasterButton);
+            this.Controls.Add(this.AggButton);
             this.Controls.Add(this.TaskComboBox);
             this.Controls.Add(this.TaskLabel);
             this.Controls.Add(this.TaskDataGridView);
@@ -314,6 +345,7 @@
         internal MetroFramework.Controls.MetroButton StartBtn;
         internal MetroFramework.Controls.MetroButton EndBtn;
         internal System.Windows.Forms.Timer timer;
+        internal System.Windows.Forms.NotifyIcon notifyIcon;
         internal MetroFramework.Controls.MetroButton RegistBtn;
         internal MetroFramework.Controls.MetroGrid TaskDataGridView;
         internal MetroFramework.Controls.MetroLabel TaskLabel;
@@ -326,5 +358,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 終了時刻;
         private System.Windows.Forms.DataGridViewTextBoxColumn 作業時間;
         private System.Windows.Forms.DataGridViewTextBoxColumn 備考;
+        private MetroFramework.Controls.MetroButton AggButton;
+        private MetroFramework.Controls.MetroButton MasterButton;
     }
 }

@@ -52,11 +52,12 @@ namespace JobManage.Form
         private void EndBtn_Click(object sender, EventArgs e)
         {
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton end_button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton regist_button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
             // ボタン押下時の処理を実行
             // 終了ボタン押下時にDB登録も実行
             end_button.OnClickLogic(this);
-            regist.OnClickLogic(this);
+            regist_button.OnClickLogic(this);
         }
 
         /// <summary>
@@ -97,6 +98,12 @@ namespace JobManage.Form
         }
 
         private void MasterButton_Click(object sender, EventArgs e)
+        {
+            JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
+            form.Show();
+        }
+
+        private void MasterButton_Click_1(object sender, EventArgs e)
         {
             JobManageMasterMente.JobManageMasterMente form = new JobManageMasterMente.JobManageMasterMente();
             form.Show();
