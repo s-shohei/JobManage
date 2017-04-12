@@ -13,7 +13,11 @@ namespace JobManage.Const
             LoginButton = 1,
             StartButton = 2,
             EndButton = 3,
-            RegistButton = 4
+            RegistButton = 4,
+            AggAnkenMonthButton = 5,
+            AggAnkenDayButton = 6,
+            AggTaskMonthButton = 7,
+            AggTaskDayButton = 8
         }
 
         public enum FormId

@@ -49,10 +49,8 @@ namespace JobManage.Form
         /// <param name="e"></param>
         private void StartBtn_Click(object sender, EventArgs e)
         {
-            // factory生成
-            ButtonFactory factory = new ButtonFactory();
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.StartButton);
+            AbstractButton button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.StartButton);
             // ボタン押下時の処理を実行
             button.OnClickLogic(this);
         }
@@ -64,10 +62,8 @@ namespace JobManage.Form
         /// <param name="e"></param>
         private void EndBtn_Click(object sender, EventArgs e)
         {
-            // factory生成
-            ButtonFactory factory = new ButtonFactory();
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
+            AbstractButton button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.EndButton);
             // ボタン押下時の処理を実行
             button.OnClickLogic(this);
         }
@@ -79,15 +75,20 @@ namespace JobManage.Form
         /// <param name="e"></param>
         private void RegistBtn_Click(object sender, EventArgs e)
         {
-            // factory生成
-            ButtonFactory factory = new ButtonFactory();
             // ボタン押下時の処理クラスを生成
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
+            AbstractButton button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.RegistButton);
             // ボタン押下時の処理を実行
             if(button.OnClickLogic(this) == 0)
             {
                 MessageBox.Show("登録完了！");
             }
+        }
+
+        private void AggButton_Click(object sender, EventArgs e)
+        {
+            JM0003Form JM0003Form = new JM0003Form();
+            JM0003Form.Show();
+            //this.Hide();
         }
     }
 }

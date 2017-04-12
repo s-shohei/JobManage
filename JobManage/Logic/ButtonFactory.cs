@@ -9,7 +9,7 @@ namespace JobManage.Logic
 
     public class ButtonFactory
     {
-        public AbstractButton CreateButtonFactory(JMConst.ButtonId id)
+        public static AbstractButton CreateButtonFactory(JMConst.ButtonId id)
         {
             AbstractButton result = null;
 
@@ -26,6 +26,18 @@ namespace JobManage.Logic
                     break;
                 case JMConst.ButtonId.RegistButton:
                     result = new OnClickRegistButtonJM0002Form();
+                    break;
+                case JMConst.ButtonId.AggAnkenMonthButton:
+                    result = new OnClickAggAnkenMonthButtonJM0003Form();
+                    break;
+                case JMConst.ButtonId.AggAnkenDayButton:
+                    result = new OnClickAggAnkenDayButtonJM0003Form();
+                    break;
+                case JMConst.ButtonId.AggTaskMonthButton:
+                    result = new OnClickAggTaskMonthButtonJM0003Form();
+                    break;
+                case JMConst.ButtonId.AggTaskDayButton:
+                    result = new OnClickAggTaskDayButtonJM0003Form();
                     break;
                 default:
                     break;

@@ -28,5 +28,19 @@ namespace JobManage.Util
         {
             return new DateTime(((input.Ticks + interval.Ticks - 1) / interval.Ticks) * interval.Ticks, input.Kind);
         }
+
+        public static string UntilMonth()
+        {
+            string sysDate = DateTime.Today.ToString();
+
+            return sysDate.Substring(0,8);
+        }
+
+        public static string UntilDay()
+        {
+            string sysDate = DateTime.Today.ToString();
+
+            return sysDate.Substring(0, 10);
+        }
     }
 }

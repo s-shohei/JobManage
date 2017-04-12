@@ -29,9 +29,7 @@ namespace JobManage
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            // Factoryよりインスタンスを生成
-            ButtonFactory factory = new ButtonFactory();
-            AbstractButton button = factory.CreateButtonFactory(Const.JMConst.ButtonId.LoginButton);
+            AbstractButton button = ButtonFactory.CreateButtonFactory(Const.JMConst.ButtonId.LoginButton);
 
             try
             {

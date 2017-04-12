@@ -99,16 +99,29 @@
     <Compile Include="Form\JM0002Form.Designer.cs">
       <DependentUpon>JM0002Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\JM0003Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\JM0003Form.Designer.cs">
+      <DependentUpon>JM0003Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AbstractAggAnken.cs" />
+    <Compile Include="Logic\AbstractAggTask.cs" />
     <Compile Include="Logic\AbstractButton.cs" />
     <Compile Include="Logic\AbstractFormLoad.cs" />
     <Compile Include="Logic\ButtonFactory.cs" />
     <Compile Include="Logic\FormLoadFactory.cs" />
+    <Compile Include="Logic\OnClickAggAnkenDayButtonJM0003Form.cs" />
+    <Compile Include="Logic\OnClickAggAnkenMonthButtonJM0003Form.cs" />
+    <Compile Include="Logic\OnClickAggTaskDayButtonJM0003Form.cs" />
+    <Compile Include="Logic\OnClickAggTaskMonthButtonJM0003Form.cs" />
     <Compile Include="Logic\OnClickEndButtonJM0002Form.cs" />
     <Compile Include="Logic\OnClickLoginButtonJM0001Form.cs" />
     <Compile Include="Logic\OnClickRegistButtonJM0002Form.cs" />
     <Compile Include="Logic\OnClickStartButtonJM0002Form.cs" />
     <Compile Include="Logic\OnFormLoadJM0002.cs" />
     <Compile Include="Model\JM0002ComboBoxListModel.cs" />
+    <Compile Include="Model\JM0003AggModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\TimerUtil.cs" />
@@ -117,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\JM0002Form.resx">
       <DependentUpon>JM0002Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\JM0003Form.resx">
+      <DependentUpon>JM0003Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,9 +144,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="JobManage.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="JobManage.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
