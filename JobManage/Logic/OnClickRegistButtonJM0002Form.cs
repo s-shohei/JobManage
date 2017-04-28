@@ -7,6 +7,8 @@ using MetroFramework.Forms;
 using JobManage.Form;
 using JobManage.Dao;
 using JobManageCore.DatabaseModel;
+using JobManageCore.Interface;
+using JobManageCore.Dao;
 
 namespace JobManage.Logic
 {
@@ -14,12 +16,14 @@ namespace JobManage.Logic
     {
 
         private JM0002Form _form;
+        // グリッドビューの全件のモデルリスト
+        private List<T_TASK_DETAIL> _modelList;
 
-        private List<T_TASK_DETAIL> modelList;
-
+        /// <summary>
+        /// ボタン制御
+        /// </summary>
         public override void ButtonStateChange()
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -33,28 +37,27 @@ namespace JobManage.Logic
 
             _form = (JM0002Form)form;
 
+            // 初期処理
             this.init();
 
-            if(this.regist())
-            {
-                result = 0;
-            }
-            else
-            {
-                result = 1;
-            }
+            // 登録処理
+            this.regist();
 
             return result;
         }
 
+        /// <summary>
+        /// 初期処理
+        /// </summary>
         private void init()
         {
             // 行数を取得
             int row = _form.TaskDataGridView.RowCount - 1;
 
-            modelList = new List<T_TASK_DETAIL>();
+            _modelList = new List<T_TASK_DETAIL>();
 
-            for(int i = 0; i < row; i++)
+            // グリッドビューの全件を読み込み、リストに設定
+            for (int i = 0; i < row; i++)
             {
                 T_TASK_DETAIL model = new T_TASK_DETAIL();
 
@@ -69,50 +72,19 @@ namespace JobManage.Logic
                 model.REMARKS = _form.TaskDataGridView.Rows[i].Cells[7].Value.ToString();
                 model.DEL_FLG = 0;
 
-                modelList.Add(model);
+                _modelList.Add(model);
             }
         }
 
-        private bool regist()
+        /// <summary>
+        /// 登録処理
+        ///     行をDBに登録する
+        /// </summary>
+        /// <returns></returns>
+        private void regist()
         {
-            bool result = false;
-
-            using (var db = new JobManageEntities())
-            {
-                try
-                {
-                    foreach (T_TASK_DETAIL m in modelList)
-                    {
-                        var record = db.T_TASK_DETAIL.Where(
-                            x => x.USER_ID == m.USER_ID &&
-                            x.PROJECT_NAME == m.PROJECT_NAME &&
-                            x.REGION_NAME == m.REGION_NAME &&
-                            x.ANKEN_NAME == m.ANKEN_NAME &&
-                            x.TASK_NAME == m.TASK_NAME &&
-                            x.START_TIME == m.START_TIME &&
-                            x.END_TIME == m.END_TIME).ToList<T_TASK_DETAIL>();
-
-                        if (record.Count == 0)
-                        {
-                            // 登録
-                            db.T_TASK_DETAIL.Add(m);
-                            // コミット
-                            db.SaveChanges();
-                            result = true;
-                        }
-                        else
-                        {
-                            // 更新
-                            result = true;
-                        }
-                    }
-                }
-                catch(Exception ex)
-                {
-                }
-            }
-
-            return result;
+            ITTaskDetail dao = new TTaskDetailDao();
+            dao.insertTaskData(_modelList);
         }
     }
 }

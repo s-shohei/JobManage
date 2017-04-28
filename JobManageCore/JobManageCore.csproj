@@ -40,6 +40,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -53,7 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Dao\DatabaseDao.cs" />
+    <Compile Include="Dao\MProjectDao.cs" />
+    <Compile Include="Dao\MTaskDao.cs" />
     <Compile Include="Dao\MUserDao.cs" />
+    <Compile Include="Dao\TTaskDetailDao.cs" />
     <Compile Include="DatabaseModel\JobManage.Context.cs">
       <DependentUpon>JobManage.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -90,6 +95,12 @@
     <Compile Include="DatabaseModel\T_TASK_DETAIL.cs">
       <DependentUpon>JobManage.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IDatabaseDao.cs" />
+    <Compile Include="Interface\IMProjectDao.cs" />
+    <Compile Include="Interface\IMTaskDao.cs" />
+    <Compile Include="Interface\IMUserDao.cs" />
+    <Compile Include="Interface\ITTaskDetail.cs" />
+    <Compile Include="Model\JM0002ComboBoxListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

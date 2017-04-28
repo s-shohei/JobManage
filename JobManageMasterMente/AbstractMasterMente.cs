@@ -20,6 +20,8 @@ namespace JobManageMasterMente
 
         public abstract void Insert();
 
+        public abstract void Delete();
+
         public void Display()
         {
             // Grid初期化

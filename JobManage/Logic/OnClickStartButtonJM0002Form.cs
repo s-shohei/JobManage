@@ -14,6 +14,9 @@ namespace JobManage.Logic
     {
         private JM0002Form _form;
 
+        /// <summary>
+        /// ボタン制御
+        /// </summary>
         public override void ButtonStateChange()
         {
             _form.StartBtn.Enabled = false;
@@ -40,9 +43,13 @@ namespace JobManage.Logic
             // ボタン制御
             this.ButtonStateChange();
 
-            return 0;
+            return result;
         }
 
+        /// <summary>
+        /// 初期処理
+        ///     選択したプロジェクト・領域・案件・作業内容に開始時刻を設定
+        /// </summary>
         private void init()
         {
 

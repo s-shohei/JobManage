@@ -8,6 +8,7 @@ using JobManage.Dao;
 using JobManage.Logic;
 using MetroFramework.Forms;
 using JobManageCore.DatabaseModel;
+using JobManageCore.Interface;
 
 namespace JobManage.Logic
 {
@@ -16,6 +17,11 @@ namespace JobManage.Logic
     {
         private JM0001Form _form;
 
+        /// <summary>
+        /// ユーザ名とパスワードでユーザ認証
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns>成功：0 失敗:1</returns>
         public override int OnClickLogic(MetroForm form)
         {
             // 返却値
@@ -47,8 +53,11 @@ namespace JobManage.Logic
             // パスワードの取得
             string password = _form.PasswordTextbox.Text;
 
+            // Daoインスタンス生成
+            IMUserDao dao = new MUserDao();
+
             // パスワードの照合
-            List<M_USER> mUser = MUserDao.SelectRecord(userName,password);
+            List<M_USER> mUser = dao.selectUserInfo(userName,password);
 
             if(mUser != null && mUser.Count != 0)
             {

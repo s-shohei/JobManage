@@ -6,56 +6,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JobManageCore.DatabaseModel;
+using JobManageCore.Interface;
+using JobManageCore.Dao;
+
 namespace JobManageMasterMente
 {
     public class ProjectMasterMente : AbstractMasterMente
     {
-        private JobManageEntities db = new JobManageEntities();
+        IMProjectDao dao = new MProjectDao();
 
         public ProjectMasterMente(JobManageMasterMente form)
         {
             _masterMenteForm = form;
         }
 
+        /// <summary>
+        /// 選択行の削除
+        /// </summary>
+        public override void Delete()
+        {
+            // 現在の選択数を取得
+            if (_masterMenteForm.MasterDataGrid.CurrentRow == null)
+            {
+                return;
+            }
+
+            // プロジェクトIDを取得
+            long projectId = long.Parse(_masterMenteForm.MasterDataGrid.CurrentRow.Cells[0].Value.ToString());
+
+            dao.delete(projectId);
+        }
+
+        /// <summary>
+        /// delete->insert処理
+        /// </summary>
         public override void Insert()
         {
-            using (db)
-            {
-                Delete();
+            List<string> projectNameList = new List<string>();
 
-                for (int i = 0; i < _masterMenteForm.MasterDataGrid.Rows.Count - 1; i++)
-                {
-                    db.M_PROJECT.Add(new M_PROJECT
-                    {
-                        SEQ = i,
-                        PROJECT_ID = i + 1,
-                        PROJECT_NAME = _masterMenteForm.MasterDataGrid.Rows[i].Cells[1].Value.ToString(),
-                        DEL_FLG = 0
-                    });
-                }
-                db.SaveChanges();
+            for(int j = 0; j<_masterMenteForm.MasterDataGrid.Rows.Count -1;j++)
+            {
+                string projectName = _masterMenteForm.MasterDataGrid.Rows[j].Cells[1].Value.ToString();
+                projectNameList.Add(projectName);
             }
+            dao.insert(projectNameList);
         }
 
+        /// <summary>
+        /// マスタ全件取得
+        /// </summary>
         public override void Select()
         {
-            using (var db = new JobManageEntities())
-            {
-                _masterDataList = db.M_PROJECT.Where(x => x.DEL_FLG != 1).ToList<Object>();
-            }
-        }
-
-        private void Delete()
-        {
-            db.M_PROJECT.Load();
-
-            List<M_PROJECT> list = new List<M_PROJECT>();
-
-            list = db.M_PROJECT.Local.ToList<M_PROJECT>();
-
-            db.M_PROJECT.RemoveRange(list);
-
-            db.SaveChanges();
+            _masterDataList = dao.select();
         }
     }
 }

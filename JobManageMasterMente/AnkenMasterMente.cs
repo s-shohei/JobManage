@@ -18,6 +18,11 @@ namespace JobManageMasterMente
             _masterMenteForm = form;
         }
 
+        public override void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void Insert()
         {
             using (db)
@@ -46,7 +51,7 @@ namespace JobManageMasterMente
             }
         }
 
-        private void Delete()
+        private void delete()
         {
             db.M_ANKEN.Load();
 

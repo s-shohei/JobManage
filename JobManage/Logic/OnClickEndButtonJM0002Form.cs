@@ -14,6 +14,9 @@ namespace JobManage.Logic
 
         private JM0002Form _form;
 
+        /// <summary>
+        /// ボタン制御
+        /// </summary>
         public override void ButtonStateChange()
         {
             _form.StartBtn.Enabled = true;
@@ -32,8 +35,10 @@ namespace JobManage.Logic
 
             _form = (JM0002Form)form;
 
+            // 初期処理
             this.init();
 
+            // ボタン制御
             this.ButtonStateChange();
 
             // 行選択をクリア
@@ -42,6 +47,10 @@ namespace JobManage.Logic
             return result;
         }
 
+        /// <summary>
+        /// 初期処理
+        ///     終了時間・作業時間を設定
+        /// </summary>
         private void init()
         {
             // 現在の選択数を取得

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JobManage.Logic
+namespace JobManageCore.Model
 {
     public class JM0002ComboBoxListModel
     {
